@@ -244,7 +244,7 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
 
     delta = ngx_current_msec;
 
-    (void) ngx_process_events(cycle, timer, flags);
+    (void) ngx_process_events(cycle, timer, flags);   // ngx_epoll_process_events
 
     delta = ngx_current_msec - delta;
 

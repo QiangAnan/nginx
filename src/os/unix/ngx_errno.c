@@ -101,7 +101,7 @@ ngx_strerror_init(void)
 
 #if (NGX_SYS_NERR)
     ngx_first_error = 0;
-    ngx_last_error = NGX_SYS_NERR;
+    ngx_last_error = NGX_SYS_NERR;  // ngx_last_error = 135
 
 #elif (EPERM > 1000 && EPERM < 0x7fffffff - 1000)
 

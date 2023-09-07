@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "nginx_make",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"-j32"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "nginx_make_detail"
+		},
+		{
+			"label": "nginx_make_install",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"install"
+			],
+		},
+		{
+			"label": "nginx_make_clean",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"clean"
+			],
+		},
+        {
+			"label": "Clear Nginx Process",
+			"type": "shell",
+			"command" : "killall nginx || true"
+        },
+	]
+}

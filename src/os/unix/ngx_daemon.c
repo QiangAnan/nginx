@@ -14,16 +14,16 @@ ngx_daemon(ngx_log_t *log)
 {
     int  fd;
 
-    switch (fork()) {
+    switch (fork()) {  // 父进程中fork的返回值是子进程的PID。 在子进程中fork的返回值是0
     case -1:
         ngx_log_error(NGX_LOG_EMERG, log, ngx_errno, "fork() failed");
         return NGX_ERROR;
 
     case 0:
-        break;
+        break;  // 子进程返回0
 
     default:
-        exit(0);
+        exit(0);  // 父进程完成部分启动代码后，交给子进程后台运行剩下启动代码，子进程以daemon的方式运行
     }
 
     ngx_parent = ngx_pid;

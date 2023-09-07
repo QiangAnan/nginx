@@ -403,7 +403,7 @@ ngx_http_wait_request_handler(ngx_event_t *rev)
     hc = c->data;
     cscf = ngx_http_get_module_srv_conf(hc->conf_ctx, ngx_http_core_module);
 
-    size = cscf->client_header_buffer_size;
+    size = cscf->client_header_buffer_size;  // 1024
 
     b = c->buffer;
 

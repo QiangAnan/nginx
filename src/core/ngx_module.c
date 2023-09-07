@@ -18,8 +18,8 @@ static ngx_uint_t ngx_module_ctx_index(ngx_cycle_t *cycle, ngx_uint_t type,
     ngx_uint_t index);
 
 
-ngx_uint_t         ngx_max_module;
-static ngx_uint_t  ngx_modules_n;
+ngx_uint_t         ngx_max_module;      // 54 + 128
+static ngx_uint_t  ngx_modules_n;       // 54
 
 
 ngx_int_t
@@ -27,12 +27,12 @@ ngx_preinit_modules(void)
 {
     ngx_uint_t  i;
 
-    for (i = 0; ngx_modules[i]; i++) {
+    for (i = 0; ngx_modules[i]; i++) { // /home/nick/code/nginx/objs/ngx_modules.c
         ngx_modules[i]->index = i;
-        ngx_modules[i]->name = ngx_module_names[i];
+        ngx_modules[i]->name = ngx_module_names[i];  // ngx_module_names保存各路module
     }
 
-    ngx_modules_n = i;
+    ngx_modules_n = i;  // 默认54个module
     ngx_max_module = ngx_modules_n + NGX_MAX_DYNAMIC_MODULES;
 
     return NGX_OK;

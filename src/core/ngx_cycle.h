@@ -76,11 +76,11 @@ struct ngx_cycle_s {
 
     ngx_cycle_t              *old_cycle;
 
-    ngx_str_t                 conf_file;
+    ngx_str_t                 conf_file;    // /usr/local/nginx/conf/nginx.conf
     ngx_str_t                 conf_param;
-    ngx_str_t                 conf_prefix;
-    ngx_str_t                 prefix;
-    ngx_str_t                 error_log;
+    ngx_str_t                 conf_prefix;  // conf/
+    ngx_str_t                 prefix;       // /usr/local/nginx/
+    ngx_str_t                 error_log;    // logs/error.log
     ngx_str_t                 lock_file;
     ngx_str_t                 hostname;
 };

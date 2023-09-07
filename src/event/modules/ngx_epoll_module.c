@@ -898,7 +898,7 @@ ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer, ngx_uint_t flags)
                 ngx_post_event(rev, queue);
 
             } else {
-                rev->handler(rev);
+                rev->handler(rev);  // ngx_event_accept
             }
         }
 

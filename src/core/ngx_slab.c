@@ -77,9 +77,9 @@ static void ngx_slab_error(ngx_slab_pool_t *pool, ngx_uint_t level,
     char *text);
 
 
-static ngx_uint_t  ngx_slab_max_size;
-static ngx_uint_t  ngx_slab_exact_size;
-static ngx_uint_t  ngx_slab_exact_shift;
+static ngx_uint_t  ngx_slab_max_size;       // 4096
+static ngx_uint_t  ngx_slab_exact_size;     // 64
+static ngx_uint_t  ngx_slab_exact_shift;    // 6
 
 
 void
@@ -87,8 +87,8 @@ ngx_slab_sizes_init(void)
 {
     ngx_uint_t  n;
 
-    ngx_slab_max_size = ngx_pagesize / 2;
-    ngx_slab_exact_size = ngx_pagesize / (8 * sizeof(uintptr_t));
+    ngx_slab_max_size = ngx_pagesize / 2; // ngx_pagesize = 4096
+    ngx_slab_exact_size = ngx_pagesize / (8 * sizeof(uintptr_t));  // ngx_slab_exact_size = 64
     for (n = ngx_slab_exact_size; n >>= 1; ngx_slab_exact_shift++) {
         /* void */
     }

@@ -50,10 +50,10 @@ ngx_os_init(ngx_log_t *log)
         return NGX_ERROR;
     }
 
-    ngx_pagesize = getpagesize();
-    ngx_cacheline_size = NGX_CPU_CACHE_LINE;
+    ngx_pagesize = getpagesize();   // 4096
+    ngx_cacheline_size = NGX_CPU_CACHE_LINE;    // 64
 
-    for (n = ngx_pagesize; n >>= 1; ngx_pagesize_shift++) { /* void */ }
+    for (n = ngx_pagesize; n >>= 1; ngx_pagesize_shift++) { /* void */ } // ngx_pagesize_shift = 12
 
 #if (NGX_HAVE_SC_NPROCESSORS_ONLN)
     if (ngx_ncpu == 0) {

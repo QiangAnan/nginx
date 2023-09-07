@@ -324,7 +324,7 @@ ngx_log_init(u_char *prefix, u_char *error_log)
     ngx_log.log_level = NGX_LOG_NOTICE;
 
     if (error_log == NULL) {
-        error_log = (u_char *) NGX_ERROR_LOG_PATH;
+        error_log = (u_char *) NGX_ERROR_LOG_PATH;  // logs/error.log
     }
 
     name = error_log;
@@ -348,7 +348,7 @@ ngx_log_init(u_char *prefix, u_char *error_log)
 
         } else {
 #ifdef NGX_PREFIX
-            prefix = (u_char *) NGX_PREFIX;
+            prefix = (u_char *) NGX_PREFIX; // /usr/local/nginx/
             plen = ngx_strlen(prefix);
 #else
             plen = 0;
@@ -356,7 +356,7 @@ ngx_log_init(u_char *prefix, u_char *error_log)
         }
 
         if (plen) {
-            name = malloc(plen + nlen + 2);
+            name = malloc(plen + nlen + 2);  // 将前缀和error log路径拼接起来 /usr/local/nginx/logs/error.log
             if (name == NULL) {
                 return NULL;
             }
@@ -377,7 +377,7 @@ ngx_log_init(u_char *prefix, u_char *error_log)
                                     NGX_FILE_CREATE_OR_OPEN,
                                     NGX_FILE_DEFAULT_ACCESS);
 
-    if (ngx_log_file.fd == NGX_INVALID_FILE) {
+    if (ngx_log_file.fd == NGX_INVALID_FILE) { // debug调试时，用户无权限打开文件
         ngx_log_stderr(ngx_errno,
                        "[alert] could not open error log file: "
                        ngx_open_file_n " \"%s\" failed", name);

@@ -1,0 +1,1520 @@
+2023/09/02 17:14:35 [error] 15491#15491: *4 open() "/usr/local/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.2.41, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.2.33", referrer: "http://192.168.2.33/"
+2023/09/02 23:11:10 [notice] 27576#27576: signal process started
+2023/09/02 23:11:10 [error] 27576#27576: open() "/usr/local/nginx/logs/nginx.pid" failed (2: No such file or directory)
+2023/09/02 23:11:36 [notice] 27582#27582: signal process started
+2023/09/02 23:12:25 [notice] 27726#27726: signal process started
+2023/09/07 14:14:50 [notice] 27692#27692: signal process started
+2023/09/07 15:28:56 [warn] 4319#4319: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /home/nick/code/nginx/debug_dir/nginx.conf:2
+2023/09/07 15:28:56 [emerg] 4319#4319: "access_log" directive is not allowed here in /home/nick/code/nginx/debug_dir/nginx.conf:8
+2023/09/07 15:30:04 [warn] 5224#5224: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /home/nick/code/nginx/debug_dir/nginx.conf:2
+2023/09/07 15:30:04 [emerg] 5224#5224: open() "/home/nick/code/nginx/debug_dir/mime.types" failed (2: No such file or directory) in /home/nick/code/nginx/debug_dir/nginx.conf:19
+2023/09/07 15:30:12 [warn] 5331#5331: the "user" directive makes sense only if the master process runs with super-user privileges, ignored in /home/nick/code/nginx/debug_dir/nginx.conf:2
+2023/09/07 15:30:12 [emerg] 5331#5331: open() "/home/nick/code/nginx/debug_dir/mime.types" failed (2: No such file or directory) in /home/nick/code/nginx/debug_dir/nginx.conf:19
+2023/09/07 15:30:57 [emerg] 5678#5678: open() "/home/nick/code/nginx/debug_dir/mime.types" failed (2: No such file or directory) in /home/nick/code/nginx/debug_dir/nginx.conf:19
+2023/09/07 15:32:43 [emerg] 6289#6289: unknown directive "/home/nick/code/nginx/debug_dir/access.log" in /home/nick/code/nginx/debug_dir/nginx.conf:29
+2023/09/07 15:33:25 [emerg] 6551#6551: unknown log format "main" in /home/nick/code/nginx/debug_dir/nginx.conf:27
+2023/09/07 15:34:22 [emerg] 6967#6967: unknown log format "main" in /home/nick/code/nginx/debug_dir/nginx.conf:27
+2023/09/07 15:34:49 [emerg] 7188#7188: unknown log format "main" in /home/nick/code/nginx/debug_dir/nginx.conf:27
+2023/09/07 15:44:45 [emerg] 9709#9709: unknown log format "main" in /home/nick/code/nginx/debug_dir/nginx.conf:26
+2023/09/07 15:46:52 [debug] 10476#10476: bind() 0.0.0.0:80 #8 
+2023/09/07 15:46:52 [emerg] 10476#10476: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2023/09/07 15:48:25 [debug] 10995#10995: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:48:25 [notice] 10995#10995: using the "epoll" event method
+2023/09/07 15:48:25 [debug] 10995#10995: counter: 00007FFFF7FF8080, 1
+2023/09/07 15:48:25 [notice] 10995#10995: nginx/1.20.0
+2023/09/07 15:48:25 [notice] 10995#10995: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 15:48:25 [notice] 10995#10995: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 15:48:25 [notice] 10995#10995: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 15:48:25 [emerg] 11066#11066: open() "/usr/local/nginx/logs/nginx.pid" failed (13: Permission denied)
+2023/09/07 15:50:43 [debug] 11660#11660: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:50:43 [notice] 11660#11660: using the "epoll" event method
+2023/09/07 15:50:43 [debug] 11660#11660: counter: 00007FFFF7FF8080, 1
+2023/09/07 15:50:43 [notice] 11660#11660: nginx/1.20.0
+2023/09/07 15:50:43 [notice] 11660#11660: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 15:50:43 [notice] 11660#11660: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 15:50:43 [notice] 11660#11660: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 15:50:43 [debug] 11665#11665: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 15:50:43 [debug] 11665#11665: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 15:50:43 [notice] 11665#11665: start worker processes
+2023/09/07 15:50:43 [debug] 11665#11665: channel 5:9
+2023/09/07 15:50:43 [notice] 11665#11665: start worker process 11666
+2023/09/07 15:50:43 [debug] 11665#11665: sigsuspend
+2023/09/07 15:50:43 [debug] 11666#11666: add cleanup: 000000000079EB60
+2023/09/07 15:50:43 [debug] 11666#11666: malloc: 000000000077A2A0:8
+2023/09/07 15:50:43 [debug] 11666#11666: notify eventfd: 11
+2023/09/07 15:50:43 [debug] 11666#11666: testing the EPOLLRDHUP flag: success
+2023/09/07 15:50:43 [debug] 11666#11666: malloc: 00000000007884C0:6144
+2023/09/07 15:50:43 [debug] 11666#11666: malloc: 00007FFFF7F9C010:245760
+2023/09/07 15:50:43 [debug] 11666#11666: malloc: 00000000007A18B0:98304
+2023/09/07 15:50:43 [debug] 11666#11666: malloc: 00000000007B98C0:98304
+2023/09/07 15:50:43 [debug] 11666#11666: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 15:50:43 [debug] 11666#11666: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 15:50:43 [debug] 11666#11666: setproctitle: "nginx: worker process"
+2023/09/07 15:50:43 [debug] 11666#11666: worker cycle
+2023/09/07 15:50:43 [debug] 11666#11666: epoll timer: -1
+2023/09/07 15:50:49 [debug] 11729#11729: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:50:49 [emerg] 11729#11729: bind() to 0.0.0.0:8881 failed (98: Address already in use)
+2023/09/07 15:50:49 [notice] 11729#11729: try again to bind() after 500ms
+2023/09/07 15:50:49 [debug] 11729#11729: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:50:49 [emerg] 11729#11729: bind() to 0.0.0.0:8881 failed (98: Address already in use)
+2023/09/07 15:50:49 [notice] 11729#11729: try again to bind() after 500ms
+2023/09/07 15:50:49 [debug] 11729#11729: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:50:49 [emerg] 11729#11729: bind() to 0.0.0.0:8881 failed (98: Address already in use)
+2023/09/07 15:50:49 [notice] 11729#11729: try again to bind() after 500ms
+2023/09/07 15:50:49 [debug] 11729#11729: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:50:49 [emerg] 11729#11729: bind() to 0.0.0.0:8881 failed (98: Address already in use)
+2023/09/07 15:50:49 [notice] 11729#11729: try again to bind() after 500ms
+2023/09/07 15:50:49 [debug] 11729#11729: bind() 0.0.0.0:8881 #8 
+2023/09/07 15:50:49 [emerg] 11729#11729: bind() to 0.0.0.0:8881 failed (98: Address already in use)
+2023/09/07 15:50:49 [notice] 11729#11729: try again to bind() after 500ms
+2023/09/07 15:50:49 [emerg] 11729#11729: still could not bind()
+2023/09/07 15:51:22 [debug] 11961#11961: bind() 0.0.0.0:8882 #8 
+2023/09/07 15:51:22 [notice] 11961#11961: using the "epoll" event method
+2023/09/07 15:51:22 [debug] 11961#11961: counter: 00007FFFF7FF8080, 1
+2023/09/07 15:51:22 [notice] 11961#11961: nginx/1.20.0
+2023/09/07 15:51:22 [notice] 11961#11961: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 15:51:22 [notice] 11961#11961: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 15:51:22 [notice] 11961#11961: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 15:51:22 [debug] 11966#11966: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 15:51:22 [debug] 11966#11966: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 15:51:22 [notice] 11966#11966: start worker processes
+2023/09/07 15:51:22 [debug] 11966#11966: channel 5:9
+2023/09/07 15:51:22 [notice] 11966#11966: start worker process 11967
+2023/09/07 15:51:22 [debug] 11966#11966: sigsuspend
+2023/09/07 15:51:22 [debug] 11967#11967: add cleanup: 000000000079EB60
+2023/09/07 15:51:22 [debug] 11967#11967: malloc: 000000000077A2A0:8
+2023/09/07 15:51:22 [debug] 11967#11967: notify eventfd: 11
+2023/09/07 15:51:22 [debug] 11967#11967: testing the EPOLLRDHUP flag: success
+2023/09/07 15:51:22 [debug] 11967#11967: malloc: 00000000007884C0:6144
+2023/09/07 15:51:22 [debug] 11967#11967: malloc: 00007FFFF7F9C010:245760
+2023/09/07 15:51:22 [debug] 11967#11967: malloc: 00000000007A18B0:98304
+2023/09/07 15:51:22 [debug] 11967#11967: malloc: 00000000007B98C0:98304
+2023/09/07 15:51:22 [debug] 11967#11967: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 15:51:22 [debug] 11967#11967: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 15:51:22 [debug] 11967#11967: setproctitle: "nginx: worker process"
+2023/09/07 15:51:22 [debug] 11967#11967: worker cycle
+2023/09/07 15:51:22 [debug] 11967#11967: epoll timer: -1
+2023/09/07 15:52:11 [notice] 11665#11665: signal 15 (SIGTERM) received from 12193, exiting
+2023/09/07 15:52:11 [notice] 11666#11666: signal 15 (SIGTERM) received from 12193, exiting
+2023/09/07 15:52:11 [debug] 11665#11665: wake up, sigio 0
+2023/09/07 15:52:11 [debug] 11665#11665: child: 0 11666 e:0 t:0 d:0 r:1 j:0
+2023/09/07 15:52:11 [info] 11666#11666: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 15:52:11 [debug] 11666#11666: timer delta: 87899
+2023/09/07 15:52:11 [notice] 11666#11666: exiting
+2023/09/07 15:52:11 [debug] 11666#11666: flush files
+2023/09/07 15:52:11 [debug] 11665#11665: termination cycle: 50
+2023/09/07 15:52:11 [debug] 11666#11666: run cleanup: 000000000079EB60
+2023/09/07 15:52:11 [debug] 11666#11666: run cleanup: 000000000079B410
+2023/09/07 15:52:11 [debug] 11666#11666: cleanup resolver
+2023/09/07 15:52:11 [debug] 11665#11665: sigsuspend
+2023/09/07 15:52:11 [debug] 11666#11666: free: 00000000007A0060
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000079EE90
+2023/09/07 15:52:11 [debug] 11666#11666: free: 0000000000795E60
+2023/09/07 15:52:11 [debug] 11666#11666: free: 0000000000794970
+2023/09/07 15:52:11 [debug] 11666#11666: free: 0000000000792950
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000078D880
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000078C7C0
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000078B700
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000077B480, unused: 0
+2023/09/07 15:52:11 [debug] 11666#11666: free: 00000000007844B0, unused: 0
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000078E940, unused: 1
+2023/09/07 15:52:11 [debug] 11666#11666: free: 0000000000796E70, unused: 0
+2023/09/07 15:52:11 [debug] 11666#11666: free: 000000000079AE80, unused: 776
+2023/09/07 15:52:11 [notice] 11966#11966: signal 15 (SIGTERM) received from 12193, exiting
+2023/09/07 15:52:11 [notice] 11666#11666: exit
+2023/09/07 15:52:11 [debug] 11966#11966: wake up, sigio 0
+2023/09/07 15:52:11 [debug] 11966#11966: child: 0 11967 e:0 t:0 d:0 r:1 j:0
+2023/09/07 15:52:11 [debug] 11966#11966: termination cycle: 50
+2023/09/07 15:52:11 [debug] 11966#11966: sigsuspend
+2023/09/07 15:52:11 [notice] 11967#11967: signal 15 (SIGTERM) received from 12193, exiting
+2023/09/07 15:52:11 [debug] 11967#11967: epoll: fd:9 ev:0001 d:00007FFFF7F9C100
+2023/09/07 15:52:11 [debug] 11967#11967: channel handler
+2023/09/07 15:52:11 [debug] 11967#11967: channel: 32
+2023/09/07 15:52:11 [debug] 11967#11967: channel command: 4
+2023/09/07 15:52:11 [debug] 11967#11967: channel: -2
+2023/09/07 15:52:11 [debug] 11967#11967: timer delta: 48764
+2023/09/07 15:52:11 [notice] 11967#11967: exiting
+2023/09/07 15:52:11 [debug] 11967#11967: flush files
+2023/09/07 15:52:11 [debug] 11967#11967: run cleanup: 000000000079EB60
+2023/09/07 15:52:11 [debug] 11967#11967: run cleanup: 000000000079B410
+2023/09/07 15:52:11 [debug] 11967#11967: cleanup resolver
+2023/09/07 15:52:11 [debug] 11967#11967: free: 00000000007A0060
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000079EE90
+2023/09/07 15:52:11 [debug] 11967#11967: free: 0000000000795E60
+2023/09/07 15:52:11 [debug] 11967#11967: free: 0000000000794970
+2023/09/07 15:52:11 [debug] 11967#11967: free: 0000000000792950
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000078D880
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000078C7C0
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000078B700
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000077B480, unused: 0
+2023/09/07 15:52:11 [debug] 11967#11967: free: 00000000007844B0, unused: 0
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000078E940, unused: 1
+2023/09/07 15:52:11 [debug] 11967#11967: free: 0000000000796E70, unused: 0
+2023/09/07 15:52:11 [debug] 11967#11967: free: 000000000079AE80, unused: 776
+2023/09/07 15:52:11 [notice] 11967#11967: exit
+2023/09/07 15:52:11 [notice] 11966#11966: signal 17 (SIGCHLD) received from 11967
+2023/09/07 15:52:11 [notice] 11665#11665: signal 17 (SIGCHLD) received from 11666
+2023/09/07 15:52:11 [notice] 11966#11966: worker process 11967 exited with code 0
+2023/09/07 15:52:11 [debug] 11966#11966: shmtx forced unlock
+2023/09/07 15:52:11 [debug] 11966#11966: wake up, sigio 3
+2023/09/07 15:52:11 [debug] 11966#11966: reap children
+2023/09/07 15:52:11 [notice] 11665#11665: worker process 11666 exited with code 0
+2023/09/07 15:52:11 [debug] 11966#11966: child: 0 11967 e:1 t:1 d:0 r:1 j:0
+2023/09/07 15:52:11 [debug] 11665#11665: shmtx forced unlock
+2023/09/07 15:52:11 [debug] 11665#11665: wake up, sigio 3
+2023/09/07 15:52:11 [debug] 11665#11665: reap children
+2023/09/07 15:52:11 [debug] 11665#11665: child: 0 11666 e:1 t:1 d:0 r:1 j:0
+2023/09/07 15:52:11 [alert] 11665#11665: unlink() "/home/nick/code/nginx/debug_dir/nginx.pid" failed (2: No such file or directory)
+2023/09/07 15:52:11 [notice] 11665#11665: exit
+2023/09/07 15:52:11 [notice] 11966#11966: exit
+2023/09/07 15:52:11 [debug] 11665#11665: close listening 0.0.0.0:8881 #8 
+2023/09/07 15:52:11 [debug] 11665#11665: run cleanup: 000000000079B410
+2023/09/07 15:52:11 [debug] 11665#11665: cleanup resolver
+2023/09/07 15:52:11 [debug] 11665#11665: free: 00000000007A0060
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000079EE90
+2023/09/07 15:52:11 [debug] 11966#11966: close listening 0.0.0.0:8882 #8 
+2023/09/07 15:52:11 [debug] 11665#11665: free: 0000000000795E60
+2023/09/07 15:52:11 [debug] 11665#11665: free: 0000000000794970
+2023/09/07 15:52:11 [debug] 11665#11665: free: 0000000000792950
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000078D880
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000078C7C0
+2023/09/07 15:52:11 [debug] 11966#11966: run cleanup: 000000000079B410
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000078B700
+2023/09/07 15:52:11 [debug] 11966#11966: cleanup resolver
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000077B480, unused: 0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 00000000007A0060
+2023/09/07 15:52:11 [debug] 11665#11665: free: 00000000007844B0, unused: 0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000079EE90
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000078E940, unused: 1
+2023/09/07 15:52:11 [debug] 11966#11966: free: 0000000000795E60
+2023/09/07 15:52:11 [debug] 11665#11665: free: 0000000000796E70, unused: 0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 0000000000794970
+2023/09/07 15:52:11 [debug] 11665#11665: free: 000000000079AE80, unused: 800
+2023/09/07 15:52:11 [debug] 11966#11966: free: 0000000000792950
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000078D880
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000078C7C0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000078B700
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000077B480, unused: 0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 00000000007844B0, unused: 0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000078E940, unused: 1
+2023/09/07 15:52:11 [debug] 11966#11966: free: 0000000000796E70, unused: 0
+2023/09/07 15:52:11 [debug] 11966#11966: free: 000000000079AE80, unused: 800
+2023/09/07 15:53:32 [debug] 12622#12622: bind() 0.0.0.0:8882 #8 
+2023/09/07 15:53:32 [notice] 12622#12622: using the "epoll" event method
+2023/09/07 15:53:32 [debug] 12622#12622: counter: 00007FFFF7FF8080, 1
+2023/09/07 15:53:32 [notice] 12622#12622: nginx/1.20.0
+2023/09/07 15:53:32 [notice] 12622#12622: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 15:53:32 [notice] 12622#12622: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 15:53:32 [notice] 12622#12622: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 15:53:32 [debug] 13439#13439: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 15:53:32 [debug] 13439#13439: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 15:53:32 [notice] 13439#13439: start worker processes
+2023/09/07 15:53:32 [debug] 13439#13439: channel 5:9
+2023/09/07 15:53:32 [notice] 13439#13439: start worker process 13440
+2023/09/07 15:53:32 [debug] 13439#13439: sigsuspend
+2023/09/07 15:53:32 [debug] 13440#13440: add cleanup: 000000000079EB60
+2023/09/07 15:53:32 [debug] 13440#13440: malloc: 000000000077A2A0:8
+2023/09/07 15:53:32 [debug] 13440#13440: notify eventfd: 11
+2023/09/07 15:53:32 [debug] 13440#13440: testing the EPOLLRDHUP flag: success
+2023/09/07 15:53:32 [debug] 13440#13440: malloc: 00000000007884C0:6144
+2023/09/07 15:53:32 [debug] 13440#13440: malloc: 00007FFFF7F9C010:245760
+2023/09/07 15:53:32 [debug] 13440#13440: malloc: 00000000007A18B0:98304
+2023/09/07 15:53:32 [debug] 13440#13440: malloc: 00000000007B98C0:98304
+2023/09/07 15:53:32 [debug] 13440#13440: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 15:53:32 [debug] 13440#13440: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 15:53:32 [debug] 13440#13440: setproctitle: "nginx: worker process"
+2023/09/07 15:53:32 [debug] 13440#13440: worker cycle
+2023/09/07 15:53:32 [debug] 13440#13440: epoll timer: -1
+2023/09/07 15:57:35 [notice] 13439#13439: signal 15 (SIGTERM) received from 13603, exiting
+2023/09/07 15:57:35 [notice] 13440#13440: signal 15 (SIGTERM) received from 13603, exiting
+2023/09/07 15:57:35 [debug] 13439#13439: wake up, sigio 0
+2023/09/07 15:57:35 [info] 13440#13440: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 15:57:35 [debug] 13439#13439: child: 0 13440 e:0 t:0 d:0 r:1 j:0
+2023/09/07 15:57:35 [debug] 13440#13440: timer delta: 242224
+2023/09/07 15:57:35 [notice] 13440#13440: exiting
+2023/09/07 15:57:35 [debug] 13439#13439: termination cycle: 50
+2023/09/07 15:57:35 [debug] 13440#13440: flush files
+2023/09/07 15:57:35 [debug] 13440#13440: run cleanup: 000000000079EB60
+2023/09/07 15:57:35 [debug] 13439#13439: sigsuspend
+2023/09/07 15:57:35 [debug] 13440#13440: run cleanup: 000000000079B410
+2023/09/07 15:57:35 [debug] 13440#13440: cleanup resolver
+2023/09/07 15:57:35 [debug] 13440#13440: free: 00000000007A0060
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000079EE90
+2023/09/07 15:57:35 [debug] 13440#13440: free: 0000000000795E60
+2023/09/07 15:57:35 [debug] 13440#13440: free: 0000000000794970
+2023/09/07 15:57:35 [debug] 13440#13440: free: 0000000000792950
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000078D880
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000078C7C0
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000078B700
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000077B480, unused: 0
+2023/09/07 15:57:35 [debug] 13440#13440: free: 00000000007844B0, unused: 0
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000078E940, unused: 1
+2023/09/07 15:57:35 [debug] 13440#13440: free: 0000000000796E70, unused: 0
+2023/09/07 15:57:35 [debug] 13440#13440: free: 000000000079AE80, unused: 776
+2023/09/07 15:57:35 [notice] 13440#13440: exit
+2023/09/07 15:57:35 [notice] 13439#13439: signal 17 (SIGCHLD) received from 13440
+2023/09/07 15:57:35 [notice] 13439#13439: worker process 13440 exited with code 0
+2023/09/07 15:57:35 [debug] 13439#13439: shmtx forced unlock
+2023/09/07 15:57:35 [debug] 13439#13439: wake up, sigio 3
+2023/09/07 15:57:35 [debug] 13439#13439: reap children
+2023/09/07 15:57:35 [debug] 13439#13439: child: 0 13440 e:1 t:1 d:0 r:1 j:0
+2023/09/07 15:57:35 [notice] 13439#13439: exit
+2023/09/07 15:57:35 [debug] 13439#13439: close listening 0.0.0.0:8882 #8 
+2023/09/07 15:57:35 [debug] 13439#13439: run cleanup: 000000000079B410
+2023/09/07 15:57:35 [debug] 13439#13439: cleanup resolver
+2023/09/07 15:57:35 [debug] 13439#13439: free: 00000000007A0060
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000079EE90
+2023/09/07 15:57:35 [debug] 13439#13439: free: 0000000000795E60
+2023/09/07 15:57:35 [debug] 13439#13439: free: 0000000000794970
+2023/09/07 15:57:35 [debug] 13439#13439: free: 0000000000792950
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000078D880
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000078C7C0
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000078B700
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000077B480, unused: 0
+2023/09/07 15:57:35 [debug] 13439#13439: free: 00000000007844B0, unused: 0
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000078E940, unused: 1
+2023/09/07 15:57:35 [debug] 13439#13439: free: 0000000000796E70, unused: 0
+2023/09/07 15:57:35 [debug] 13439#13439: free: 000000000079AE80, unused: 800
+2023/09/07 15:58:06 [debug] 13748#13748: bind() 0.0.0.0:8882 #8 
+2023/09/07 15:58:06 [notice] 13748#13748: using the "epoll" event method
+2023/09/07 15:58:06 [debug] 13748#13748: counter: 00007FFFF7FF8080, 1
+2023/09/07 15:58:06 [notice] 13748#13748: nginx/1.20.0
+2023/09/07 15:58:06 [notice] 13748#13748: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 15:58:06 [notice] 13748#13748: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 15:58:06 [notice] 13748#13748: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 15:58:06 [debug] 13855#13855: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 15:58:06 [debug] 13855#13855: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 15:58:06 [notice] 13855#13855: start worker processes
+2023/09/07 15:58:06 [debug] 13855#13855: channel 5:9
+2023/09/07 15:58:06 [notice] 13855#13855: start worker process 13856
+2023/09/07 15:58:06 [debug] 13855#13855: sigsuspend
+2023/09/07 15:58:06 [debug] 13856#13856: add cleanup: 000000000079EB60
+2023/09/07 15:58:06 [debug] 13856#13856: malloc: 000000000077A2A0:8
+2023/09/07 15:58:06 [debug] 13856#13856: notify eventfd: 11
+2023/09/07 15:58:06 [debug] 13856#13856: testing the EPOLLRDHUP flag: success
+2023/09/07 15:58:06 [debug] 13856#13856: malloc: 00000000007884C0:6144
+2023/09/07 15:58:06 [debug] 13856#13856: malloc: 00007FFFF7F9C010:245760
+2023/09/07 15:58:06 [debug] 13856#13856: malloc: 00000000007A18B0:98304
+2023/09/07 15:58:06 [debug] 13856#13856: malloc: 00000000007B98C0:98304
+2023/09/07 15:58:06 [debug] 13856#13856: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 15:58:06 [debug] 13856#13856: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 15:58:06 [debug] 13856#13856: setproctitle: "nginx: worker process"
+2023/09/07 15:58:06 [debug] 13856#13856: worker cycle
+2023/09/07 15:58:06 [debug] 13856#13856: epoll timer: -1
+2023/09/07 16:00:45 [debug] 14384#14384: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:00:45 [emerg] 14384#14384: bind() to 0.0.0.0:8882 failed (98: Address already in use)
+2023/09/07 16:00:45 [notice] 14384#14384: try again to bind() after 500ms
+2023/09/07 16:00:45 [debug] 14384#14384: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:00:45 [emerg] 14384#14384: bind() to 0.0.0.0:8882 failed (98: Address already in use)
+2023/09/07 16:00:45 [notice] 14384#14384: try again to bind() after 500ms
+2023/09/07 16:00:45 [debug] 14384#14384: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:00:45 [emerg] 14384#14384: bind() to 0.0.0.0:8882 failed (98: Address already in use)
+2023/09/07 16:00:45 [notice] 14384#14384: try again to bind() after 500ms
+2023/09/07 16:00:45 [debug] 14384#14384: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:00:45 [emerg] 14384#14384: bind() to 0.0.0.0:8882 failed (98: Address already in use)
+2023/09/07 16:00:45 [notice] 14384#14384: try again to bind() after 500ms
+2023/09/07 16:00:45 [debug] 14384#14384: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:00:45 [emerg] 14384#14384: bind() to 0.0.0.0:8882 failed (98: Address already in use)
+2023/09/07 16:00:45 [notice] 14384#14384: try again to bind() after 500ms
+2023/09/07 16:00:45 [emerg] 14384#14384: still could not bind()
+2023/09/07 16:00:57 [notice] 13855#13855: signal 15 (SIGTERM) received from 14483, exiting
+2023/09/07 16:00:57 [debug] 13855#13855: wake up, sigio 0
+2023/09/07 16:00:57 [debug] 13855#13855: child: 0 13856 e:0 t:0 d:0 r:1 j:0
+2023/09/07 16:00:57 [debug] 13855#13855: termination cycle: 50
+2023/09/07 16:00:57 [debug] 13855#13855: sigsuspend
+2023/09/07 16:00:57 [notice] 13856#13856: signal 15 (SIGTERM) received from 14483, exiting
+2023/09/07 16:00:57 [debug] 13856#13856: epoll: fd:9 ev:0001 d:00007FFFF7F9C100
+2023/09/07 16:00:57 [debug] 13856#13856: channel handler
+2023/09/07 16:00:57 [debug] 13856#13856: channel: 32
+2023/09/07 16:00:57 [debug] 13856#13856: channel command: 4
+2023/09/07 16:00:57 [debug] 13856#13856: channel: -2
+2023/09/07 16:00:57 [debug] 13856#13856: timer delta: 170559
+2023/09/07 16:00:57 [notice] 13856#13856: exiting
+2023/09/07 16:00:57 [debug] 13856#13856: flush files
+2023/09/07 16:00:57 [debug] 13856#13856: run cleanup: 000000000079EB60
+2023/09/07 16:00:57 [debug] 13856#13856: run cleanup: 000000000079B410
+2023/09/07 16:00:57 [debug] 13856#13856: cleanup resolver
+2023/09/07 16:00:57 [debug] 13856#13856: free: 00000000007A0060
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000079EE90
+2023/09/07 16:00:57 [debug] 13856#13856: free: 0000000000795E60
+2023/09/07 16:00:57 [debug] 13856#13856: free: 0000000000794970
+2023/09/07 16:00:57 [debug] 13856#13856: free: 0000000000792950
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000078D880
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000078C7C0
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000078B700
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000077B480, unused: 0
+2023/09/07 16:00:57 [debug] 13856#13856: free: 00000000007844B0, unused: 0
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000078E940, unused: 1
+2023/09/07 16:00:57 [debug] 13856#13856: free: 0000000000796E70, unused: 0
+2023/09/07 16:00:57 [debug] 13856#13856: free: 000000000079AE80, unused: 776
+2023/09/07 16:00:57 [notice] 13856#13856: exit
+2023/09/07 16:00:57 [notice] 13855#13855: signal 17 (SIGCHLD) received from 13856
+2023/09/07 16:00:57 [notice] 13855#13855: worker process 13856 exited with code 0
+2023/09/07 16:00:57 [debug] 13855#13855: shmtx forced unlock
+2023/09/07 16:00:57 [debug] 13855#13855: wake up, sigio 3
+2023/09/07 16:00:57 [debug] 13855#13855: reap children
+2023/09/07 16:00:57 [debug] 13855#13855: child: 0 13856 e:1 t:1 d:0 r:1 j:0
+2023/09/07 16:00:57 [notice] 13855#13855: exit
+2023/09/07 16:00:57 [debug] 13855#13855: close listening 0.0.0.0:8882 #8 
+2023/09/07 16:00:57 [debug] 13855#13855: run cleanup: 000000000079B410
+2023/09/07 16:00:57 [debug] 13855#13855: cleanup resolver
+2023/09/07 16:00:57 [debug] 13855#13855: free: 00000000007A0060
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000079EE90
+2023/09/07 16:00:57 [debug] 13855#13855: free: 0000000000795E60
+2023/09/07 16:00:57 [debug] 13855#13855: free: 0000000000794970
+2023/09/07 16:00:57 [debug] 13855#13855: free: 0000000000792950
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000078D880
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000078C7C0
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000078B700
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000077B480, unused: 0
+2023/09/07 16:00:57 [debug] 13855#13855: free: 00000000007844B0, unused: 0
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000078E940, unused: 1
+2023/09/07 16:00:57 [debug] 13855#13855: free: 0000000000796E70, unused: 0
+2023/09/07 16:00:57 [debug] 13855#13855: free: 000000000079AE80, unused: 800
+2023/09/07 16:01:00 [debug] 14519#14519: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:01:00 [notice] 14519#14519: using the "epoll" event method
+2023/09/07 16:01:00 [debug] 14519#14519: counter: 00007FFFF7FF8080, 1
+2023/09/07 16:01:00 [notice] 14519#14519: nginx/1.20.0
+2023/09/07 16:01:00 [notice] 14519#14519: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 16:01:00 [notice] 14519#14519: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 16:01:00 [notice] 14519#14519: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 16:01:00 [debug] 14716#14716: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 16:01:00 [debug] 14716#14716: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 16:01:00 [notice] 14716#14716: start worker processes
+2023/09/07 16:01:00 [debug] 14716#14716: channel 5:9
+2023/09/07 16:01:00 [notice] 14716#14716: start worker process 14717
+2023/09/07 16:01:00 [debug] 14716#14716: sigsuspend
+2023/09/07 16:01:00 [debug] 14717#14717: add cleanup: 000000000079EB60
+2023/09/07 16:01:00 [debug] 14717#14717: malloc: 000000000077A2A0:8
+2023/09/07 16:01:00 [debug] 14717#14717: notify eventfd: 11
+2023/09/07 16:01:00 [debug] 14717#14717: testing the EPOLLRDHUP flag: success
+2023/09/07 16:01:00 [debug] 14717#14717: malloc: 00000000007884C0:6144
+2023/09/07 16:01:00 [debug] 14717#14717: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:01:00 [debug] 14717#14717: malloc: 00000000007A18B0:98304
+2023/09/07 16:01:00 [debug] 14717#14717: malloc: 00000000007B98C0:98304
+2023/09/07 16:01:00 [debug] 14717#14717: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:01:00 [debug] 14717#14717: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:01:00 [debug] 14717#14717: setproctitle: "nginx: worker process"
+2023/09/07 16:01:00 [debug] 14717#14717: worker cycle
+2023/09/07 16:01:00 [debug] 14717#14717: epoll timer: -1
+2023/09/07 16:10:24 [notice] 14717#14717: signal 15 (SIGTERM) received from 16574, exiting
+2023/09/07 16:10:24 [info] 14717#14717: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:10:24 [debug] 14717#14717: timer delta: 563727
+2023/09/07 16:10:24 [notice] 14717#14717: exiting
+2023/09/07 16:10:24 [debug] 14717#14717: flush files
+2023/09/07 16:10:24 [debug] 14717#14717: run cleanup: 000000000079EB60
+2023/09/07 16:10:24 [debug] 14717#14717: run cleanup: 000000000079B410
+2023/09/07 16:10:24 [debug] 14717#14717: cleanup resolver
+2023/09/07 16:10:24 [debug] 14717#14717: free: 00000000007A0060
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000079EE90
+2023/09/07 16:10:24 [debug] 14717#14717: free: 0000000000795E60
+2023/09/07 16:10:24 [debug] 14717#14717: free: 0000000000794970
+2023/09/07 16:10:24 [debug] 14717#14717: free: 0000000000792950
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000078D880
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000078C7C0
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000078B700
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000077B480, unused: 0
+2023/09/07 16:10:24 [debug] 14717#14717: free: 00000000007844B0, unused: 0
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000078E940, unused: 1
+2023/09/07 16:10:24 [debug] 14717#14717: free: 0000000000796E70, unused: 0
+2023/09/07 16:10:24 [debug] 14717#14717: free: 000000000079AE80, unused: 776
+2023/09/07 16:10:24 [notice] 14717#14717: exit
+2023/09/07 16:10:24 [notice] 14716#14716: signal 15 (SIGTERM) received from 16574, exiting
+2023/09/07 16:10:24 [debug] 14716#14716: wake up, sigio 0
+2023/09/07 16:10:24 [debug] 14716#14716: child: 0 14717 e:0 t:0 d:0 r:1 j:0
+2023/09/07 16:10:24 [debug] 14716#14716: termination cycle: 50
+2023/09/07 16:10:24 [debug] 14716#14716: sigsuspend
+2023/09/07 16:10:24 [notice] 14716#14716: signal 17 (SIGCHLD) received from 14717
+2023/09/07 16:10:24 [notice] 14716#14716: worker process 14717 exited with code 0
+2023/09/07 16:10:24 [debug] 14716#14716: shmtx forced unlock
+2023/09/07 16:10:24 [debug] 14716#14716: wake up, sigio 3
+2023/09/07 16:10:24 [debug] 14716#14716: reap children
+2023/09/07 16:10:24 [debug] 14716#14716: child: 0 14717 e:1 t:1 d:0 r:1 j:0
+2023/09/07 16:10:24 [notice] 14716#14716: exit
+2023/09/07 16:10:24 [debug] 14716#14716: close listening 0.0.0.0:8882 #8 
+2023/09/07 16:10:24 [debug] 14716#14716: run cleanup: 000000000079B410
+2023/09/07 16:10:24 [debug] 14716#14716: cleanup resolver
+2023/09/07 16:10:24 [debug] 14716#14716: free: 00000000007A0060
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000079EE90
+2023/09/07 16:10:24 [debug] 14716#14716: free: 0000000000795E60
+2023/09/07 16:10:24 [debug] 14716#14716: free: 0000000000794970
+2023/09/07 16:10:24 [debug] 14716#14716: free: 0000000000792950
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000078D880
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000078C7C0
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000078B700
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000077B480, unused: 0
+2023/09/07 16:10:24 [debug] 14716#14716: free: 00000000007844B0, unused: 0
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000078E940, unused: 1
+2023/09/07 16:10:24 [debug] 14716#14716: free: 0000000000796E70, unused: 0
+2023/09/07 16:10:24 [debug] 14716#14716: free: 000000000079AE80, unused: 800
+2023/09/07 16:10:27 [debug] 16604#16604: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:10:27 [notice] 16604#16604: using the "epoll" event method
+2023/09/07 16:10:27 [debug] 16604#16604: counter: 00007FFFF7FF8080, 1
+2023/09/07 16:10:27 [notice] 16604#16604: nginx/1.20.0
+2023/09/07 16:10:27 [notice] 16604#16604: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 16:10:27 [notice] 16604#16604: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 16:10:27 [notice] 16604#16604: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 16:10:27 [debug] 16674#16674: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 16:10:27 [debug] 16674#16674: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 16:10:27 [notice] 16674#16674: start worker processes
+2023/09/07 16:10:27 [debug] 16674#16674: channel 5:9
+2023/09/07 16:10:27 [notice] 16674#16674: start worker process 17273
+2023/09/07 16:10:27 [debug] 17273#17273: add cleanup: 000000000079EB60
+2023/09/07 16:10:27 [debug] 16674#16674: sigsuspend
+2023/09/07 16:10:27 [debug] 17273#17273: malloc: 000000000077A2A0:8
+2023/09/07 16:10:27 [debug] 17273#17273: notify eventfd: 11
+2023/09/07 16:10:27 [debug] 17273#17273: testing the EPOLLRDHUP flag: success
+2023/09/07 16:10:27 [debug] 17273#17273: malloc: 00000000007884C0:6144
+2023/09/07 16:10:27 [debug] 17273#17273: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:10:27 [debug] 17273#17273: malloc: 00000000007A18B0:98304
+2023/09/07 16:10:27 [debug] 17273#17273: malloc: 00000000007B98C0:98304
+2023/09/07 16:10:27 [debug] 17273#17273: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:10:27 [debug] 17273#17273: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:10:27 [debug] 17273#17273: setproctitle: "nginx: worker process"
+2023/09/07 16:10:27 [debug] 17273#17273: worker cycle
+2023/09/07 16:10:27 [debug] 17273#17273: epoll timer: -1
+2023/09/07 16:13:04 [info] 17273#17273: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:13:04 [debug] 17273#17273: timer delta: 156882
+2023/09/07 16:13:04 [debug] 17273#17273: worker cycle
+2023/09/07 16:13:04 [debug] 17273#17273: epoll timer: -1
+2023/09/07 16:13:06 [info] 17273#17273: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:13:06 [debug] 17273#17273: timer delta: 2763
+2023/09/07 16:13:06 [debug] 17273#17273: worker cycle
+2023/09/07 16:13:06 [debug] 17273#17273: epoll timer: -1
+2023/09/07 16:13:11 [notice] 16674#16674: signal 17 (SIGCHLD) received from 17273
+2023/09/07 16:13:11 [alert] 16674#16674: worker process 17273 exited on signal 9
+2023/09/07 16:13:11 [debug] 16674#16674: shmtx forced unlock
+2023/09/07 16:13:11 [debug] 16674#16674: wake up, sigio 0
+2023/09/07 16:13:11 [debug] 16674#16674: reap children
+2023/09/07 16:13:11 [debug] 16674#16674: child: 0 17273 e:0 t:1 d:0 r:1 j:0
+2023/09/07 16:13:11 [debug] 16674#16674: channel 5:9
+2023/09/07 16:13:11 [notice] 16674#16674: start worker process 17317
+2023/09/07 16:13:11 [debug] 16674#16674: sigsuspend
+2023/09/07 16:13:11 [debug] 17317#17317: add cleanup: 000000000079EB60
+2023/09/07 16:13:11 [debug] 17317#17317: malloc: 000000000077A2A0:8
+2023/09/07 16:13:11 [debug] 17317#17317: notify eventfd: 11
+2023/09/07 16:13:11 [debug] 17317#17317: testing the EPOLLRDHUP flag: success
+2023/09/07 16:13:11 [debug] 17317#17317: malloc: 00000000007884C0:6144
+2023/09/07 16:13:11 [debug] 17317#17317: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:13:11 [debug] 17317#17317: malloc: 00000000007A18B0:98304
+2023/09/07 16:13:11 [debug] 17317#17317: malloc: 00000000007B98C0:98304
+2023/09/07 16:13:11 [debug] 17317#17317: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:13:11 [debug] 17317#17317: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:13:11 [debug] 17317#17317: setproctitle: "nginx: worker process"
+2023/09/07 16:13:11 [debug] 17317#17317: worker cycle
+2023/09/07 16:13:11 [debug] 17317#17317: epoll timer: -1
+2023/09/07 16:13:12 [notice] 16674#16674: signal 15 (SIGTERM) received from 17337, exiting
+2023/09/07 16:13:12 [debug] 16674#16674: wake up, sigio 0
+2023/09/07 16:13:12 [debug] 16674#16674: child: 0 17317 e:0 t:0 d:0 r:1 j:0
+2023/09/07 16:13:12 [debug] 16674#16674: termination cycle: 50
+2023/09/07 16:13:12 [debug] 16674#16674: sigsuspend
+2023/09/07 16:13:12 [debug] 17317#17317: epoll: fd:9 ev:0001 d:00007FFFF7F9C100
+2023/09/07 16:13:12 [debug] 17317#17317: channel handler
+2023/09/07 16:13:12 [debug] 17317#17317: channel: 32
+2023/09/07 16:13:12 [debug] 17317#17317: channel command: 4
+2023/09/07 16:13:12 [debug] 17317#17317: channel: -2
+2023/09/07 16:13:12 [debug] 17317#17317: timer delta: 1184
+2023/09/07 16:13:12 [notice] 17317#17317: exiting
+2023/09/07 16:13:12 [debug] 17317#17317: flush files
+2023/09/07 16:13:12 [debug] 17317#17317: run cleanup: 000000000079EB60
+2023/09/07 16:13:12 [debug] 17317#17317: run cleanup: 000000000079B410
+2023/09/07 16:13:12 [debug] 17317#17317: cleanup resolver
+2023/09/07 16:13:12 [debug] 17317#17317: free: 00000000007A0060
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000079EE90
+2023/09/07 16:13:12 [debug] 17317#17317: free: 0000000000795E60
+2023/09/07 16:13:12 [debug] 17317#17317: free: 0000000000794970
+2023/09/07 16:13:12 [debug] 17317#17317: free: 0000000000792950
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000078D880
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000078C7C0
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000078B700
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000077B480, unused: 0
+2023/09/07 16:13:12 [debug] 17317#17317: free: 00000000007844B0, unused: 0
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000078E940, unused: 1
+2023/09/07 16:13:12 [debug] 17317#17317: free: 0000000000796E70, unused: 0
+2023/09/07 16:13:12 [debug] 17317#17317: free: 000000000079AE80, unused: 776
+2023/09/07 16:13:12 [notice] 17317#17317: exit
+2023/09/07 16:13:12 [notice] 17317#17317: signal 15 (SIGTERM) received from 17337, exiting
+2023/09/07 16:13:12 [notice] 16674#16674: signal 17 (SIGCHLD) received from 17317
+2023/09/07 16:13:12 [notice] 16674#16674: worker process 17317 exited with code 0
+2023/09/07 16:13:12 [debug] 16674#16674: shmtx forced unlock
+2023/09/07 16:13:12 [debug] 16674#16674: wake up, sigio 3
+2023/09/07 16:13:12 [debug] 16674#16674: reap children
+2023/09/07 16:13:12 [debug] 16674#16674: child: 0 17317 e:1 t:1 d:0 r:1 j:0
+2023/09/07 16:13:12 [notice] 16674#16674: exit
+2023/09/07 16:13:12 [debug] 16674#16674: close listening 0.0.0.0:8882 #8 
+2023/09/07 16:13:12 [debug] 16674#16674: run cleanup: 000000000079B410
+2023/09/07 16:13:12 [debug] 16674#16674: cleanup resolver
+2023/09/07 16:13:12 [debug] 16674#16674: free: 00000000007A0060
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000079EE90
+2023/09/07 16:13:12 [debug] 16674#16674: free: 0000000000795E60
+2023/09/07 16:13:12 [debug] 16674#16674: free: 0000000000794970
+2023/09/07 16:13:12 [debug] 16674#16674: free: 0000000000792950
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000078D880
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000078C7C0
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000078B700
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000077B480, unused: 0
+2023/09/07 16:13:12 [debug] 16674#16674: free: 00000000007844B0, unused: 0
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000078E940, unused: 1
+2023/09/07 16:13:12 [debug] 16674#16674: free: 0000000000796E70, unused: 0
+2023/09/07 16:13:12 [debug] 16674#16674: free: 000000000079AE80, unused: 800
+2023/09/07 16:13:14 [debug] 17364#17364: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:13:14 [notice] 17364#17364: using the "epoll" event method
+2023/09/07 16:13:14 [debug] 17364#17364: counter: 00007FFFF7FF8080, 1
+2023/09/07 16:13:14 [notice] 17364#17364: nginx/1.20.0
+2023/09/07 16:13:14 [notice] 17364#17364: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 16:13:14 [notice] 17364#17364: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 16:13:14 [notice] 17364#17364: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 16:13:14 [debug] 17430#17430: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 16:13:14 [debug] 17430#17430: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 16:13:14 [notice] 17430#17430: start worker processes
+2023/09/07 16:13:14 [debug] 17430#17430: channel 5:9
+2023/09/07 16:13:14 [notice] 17430#17430: start worker process 17699
+2023/09/07 16:13:14 [debug] 17430#17430: sigsuspend
+2023/09/07 16:13:14 [debug] 17699#17699: add cleanup: 000000000079EB60
+2023/09/07 16:13:14 [debug] 17699#17699: malloc: 000000000077A2A0:8
+2023/09/07 16:13:14 [debug] 17699#17699: notify eventfd: 11
+2023/09/07 16:13:14 [debug] 17699#17699: testing the EPOLLRDHUP flag: success
+2023/09/07 16:13:14 [debug] 17699#17699: malloc: 00000000007884C0:6144
+2023/09/07 16:13:14 [debug] 17699#17699: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:13:14 [debug] 17699#17699: malloc: 00000000007A18B0:98304
+2023/09/07 16:13:14 [debug] 17699#17699: malloc: 00000000007B98C0:98304
+2023/09/07 16:13:14 [debug] 17699#17699: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:13:14 [debug] 17699#17699: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:13:14 [debug] 17699#17699: setproctitle: "nginx: worker process"
+2023/09/07 16:13:14 [debug] 17699#17699: worker cycle
+2023/09/07 16:13:14 [debug] 17699#17699: epoll timer: -1
+2023/09/07 16:14:36 [info] 17699#17699: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:14:36 [debug] 17699#17699: timer delta: 81485
+2023/09/07 16:14:36 [debug] 17699#17699: worker cycle
+2023/09/07 16:14:36 [debug] 17699#17699: epoll timer: -1
+2023/09/07 16:14:37 [notice] 17430#17430: signal 17 (SIGCHLD) received from 17699
+2023/09/07 16:14:37 [alert] 17430#17430: worker process 17699 exited on signal 9
+2023/09/07 16:14:37 [debug] 17430#17430: shmtx forced unlock
+2023/09/07 16:14:37 [debug] 17430#17430: wake up, sigio 0
+2023/09/07 16:14:37 [debug] 17430#17430: reap children
+2023/09/07 16:14:37 [debug] 17430#17430: child: 0 17699 e:0 t:1 d:0 r:1 j:0
+2023/09/07 16:14:37 [debug] 17430#17430: channel 5:9
+2023/09/07 16:14:37 [notice] 17430#17430: start worker process 17761
+2023/09/07 16:14:37 [debug] 17430#17430: sigsuspend
+2023/09/07 16:14:37 [debug] 17761#17761: add cleanup: 000000000079EB60
+2023/09/07 16:14:37 [debug] 17761#17761: malloc: 000000000077A2A0:8
+2023/09/07 16:14:37 [debug] 17761#17761: notify eventfd: 11
+2023/09/07 16:14:37 [debug] 17761#17761: testing the EPOLLRDHUP flag: success
+2023/09/07 16:14:37 [debug] 17761#17761: malloc: 00000000007884C0:6144
+2023/09/07 16:14:37 [debug] 17761#17761: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:14:37 [debug] 17761#17761: malloc: 00000000007A18B0:98304
+2023/09/07 16:14:37 [debug] 17761#17761: malloc: 00000000007B98C0:98304
+2023/09/07 16:14:37 [debug] 17761#17761: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:14:37 [debug] 17761#17761: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:14:37 [debug] 17761#17761: setproctitle: "nginx: worker process"
+2023/09/07 16:14:37 [debug] 17761#17761: worker cycle
+2023/09/07 16:14:37 [debug] 17761#17761: epoll timer: -1
+2023/09/07 16:14:39 [notice] 17430#17430: signal 15 (SIGTERM) received from 17780, exiting
+2023/09/07 16:14:39 [debug] 17430#17430: wake up, sigio 0
+2023/09/07 16:14:39 [debug] 17430#17430: child: 0 17761 e:0 t:0 d:0 r:1 j:0
+2023/09/07 16:14:39 [debug] 17430#17430: termination cycle: 50
+2023/09/07 16:14:39 [debug] 17430#17430: sigsuspend
+2023/09/07 16:14:39 [notice] 17761#17761: signal 15 (SIGTERM) received from 17780, exiting
+2023/09/07 16:14:39 [debug] 17761#17761: epoll: fd:9 ev:0001 d:00007FFFF7F9C100
+2023/09/07 16:14:39 [debug] 17761#17761: channel handler
+2023/09/07 16:14:39 [debug] 17761#17761: channel: 32
+2023/09/07 16:14:39 [debug] 17761#17761: channel command: 4
+2023/09/07 16:14:39 [debug] 17761#17761: channel: -2
+2023/09/07 16:14:39 [debug] 17761#17761: timer delta: 1397
+2023/09/07 16:14:39 [notice] 17761#17761: exiting
+2023/09/07 16:14:39 [debug] 17761#17761: flush files
+2023/09/07 16:14:39 [debug] 17761#17761: run cleanup: 000000000079EB60
+2023/09/07 16:14:39 [debug] 17761#17761: run cleanup: 000000000079B410
+2023/09/07 16:14:39 [debug] 17761#17761: cleanup resolver
+2023/09/07 16:14:39 [debug] 17761#17761: free: 00000000007A0060
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000079EE90
+2023/09/07 16:14:39 [debug] 17761#17761: free: 0000000000795E60
+2023/09/07 16:14:39 [debug] 17761#17761: free: 0000000000794970
+2023/09/07 16:14:39 [debug] 17761#17761: free: 0000000000792950
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000078D880
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000078C7C0
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000078B700
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000077B480, unused: 0
+2023/09/07 16:14:39 [debug] 17761#17761: free: 00000000007844B0, unused: 0
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000078E940, unused: 1
+2023/09/07 16:14:39 [debug] 17761#17761: free: 0000000000796E70, unused: 0
+2023/09/07 16:14:39 [debug] 17761#17761: free: 000000000079AE80, unused: 776
+2023/09/07 16:14:39 [notice] 17761#17761: exit
+2023/09/07 16:14:39 [notice] 17430#17430: signal 17 (SIGCHLD) received from 17761
+2023/09/07 16:14:39 [notice] 17430#17430: worker process 17761 exited with code 0
+2023/09/07 16:14:39 [debug] 17430#17430: shmtx forced unlock
+2023/09/07 16:14:39 [debug] 17430#17430: wake up, sigio 3
+2023/09/07 16:14:39 [debug] 17430#17430: reap children
+2023/09/07 16:14:39 [debug] 17430#17430: child: 0 17761 e:1 t:1 d:0 r:1 j:0
+2023/09/07 16:14:39 [notice] 17430#17430: exit
+2023/09/07 16:14:39 [debug] 17430#17430: close listening 0.0.0.0:8882 #8 
+2023/09/07 16:14:39 [debug] 17430#17430: run cleanup: 000000000079B410
+2023/09/07 16:14:39 [debug] 17430#17430: cleanup resolver
+2023/09/07 16:14:39 [debug] 17430#17430: free: 00000000007A0060
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000079EE90
+2023/09/07 16:14:39 [debug] 17430#17430: free: 0000000000795E60
+2023/09/07 16:14:39 [debug] 17430#17430: free: 0000000000794970
+2023/09/07 16:14:39 [debug] 17430#17430: free: 0000000000792950
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000078D880
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000078C7C0
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000078B700
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000077B480, unused: 0
+2023/09/07 16:14:39 [debug] 17430#17430: free: 00000000007844B0, unused: 0
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000078E940, unused: 1
+2023/09/07 16:14:39 [debug] 17430#17430: free: 0000000000796E70, unused: 0
+2023/09/07 16:14:39 [debug] 17430#17430: free: 000000000079AE80, unused: 800
+2023/09/07 16:14:41 [debug] 17807#17807: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:14:41 [notice] 17807#17807: using the "epoll" event method
+2023/09/07 16:14:41 [debug] 17807#17807: counter: 00007FFFF7FF8080, 1
+2023/09/07 16:14:41 [notice] 17807#17807: nginx/1.20.0
+2023/09/07 16:14:41 [notice] 17807#17807: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 16:14:41 [notice] 17807#17807: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 16:14:41 [notice] 17807#17807: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 16:14:41 [debug] 17872#17872: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 16:14:41 [debug] 17872#17872: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 16:14:41 [notice] 17872#17872: start worker processes
+2023/09/07 16:14:41 [debug] 17872#17872: channel 5:9
+2023/09/07 16:14:41 [notice] 17872#17872: start worker process 17976
+2023/09/07 16:14:41 [debug] 17872#17872: sigsuspend
+2023/09/07 16:14:41 [debug] 17976#17976: add cleanup: 000000000079EB60
+2023/09/07 16:14:41 [debug] 17976#17976: malloc: 000000000077A2A0:8
+2023/09/07 16:14:41 [debug] 17976#17976: notify eventfd: 11
+2023/09/07 16:14:41 [debug] 17976#17976: testing the EPOLLRDHUP flag: success
+2023/09/07 16:14:41 [debug] 17976#17976: malloc: 00000000007884C0:6144
+2023/09/07 16:14:41 [debug] 17976#17976: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:14:41 [debug] 17976#17976: malloc: 00000000007A18B0:98304
+2023/09/07 16:14:41 [debug] 17976#17976: malloc: 00000000007B98C0:98304
+2023/09/07 16:14:41 [debug] 17976#17976: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:14:41 [debug] 17976#17976: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:14:41 [debug] 17976#17976: setproctitle: "nginx: worker process"
+2023/09/07 16:14:41 [debug] 17976#17976: worker cycle
+2023/09/07 16:14:41 [debug] 17976#17976: epoll timer: -1
+2023/09/07 16:15:31 [info] 17976#17976: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:15:31 [debug] 17976#17976: timer delta: 49291
+2023/09/07 16:15:31 [debug] 17976#17976: worker cycle
+2023/09/07 16:17:39 [notice] 17872#17872: signal 17 (SIGCHLD) received from 17976
+2023/09/07 16:17:39 [alert] 17872#17872: worker process 17976 exited on signal 9
+2023/09/07 16:17:39 [debug] 17872#17872: shmtx forced unlock
+2023/09/07 16:17:39 [debug] 17872#17872: wake up, sigio 0
+2023/09/07 16:17:39 [debug] 17872#17872: reap children
+2023/09/07 16:17:39 [debug] 17872#17872: child: 0 17976 e:0 t:1 d:0 r:1 j:0
+2023/09/07 16:17:39 [debug] 17872#17872: channel 5:9
+2023/09/07 16:17:39 [notice] 17872#17872: start worker process 18578
+2023/09/07 16:17:39 [debug] 17872#17872: sigsuspend
+2023/09/07 16:17:39 [debug] 18578#18578: add cleanup: 000000000079EB60
+2023/09/07 16:17:39 [debug] 18578#18578: malloc: 000000000077A2A0:8
+2023/09/07 16:17:39 [debug] 18578#18578: notify eventfd: 11
+2023/09/07 16:17:39 [debug] 18578#18578: testing the EPOLLRDHUP flag: success
+2023/09/07 16:17:39 [debug] 18578#18578: malloc: 00000000007884C0:6144
+2023/09/07 16:17:39 [debug] 18578#18578: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:17:39 [debug] 18578#18578: malloc: 00000000007A18B0:98304
+2023/09/07 16:17:39 [debug] 18578#18578: malloc: 00000000007B98C0:98304
+2023/09/07 16:17:39 [debug] 18578#18578: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:17:39 [debug] 18578#18578: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:17:39 [debug] 18578#18578: setproctitle: "nginx: worker process"
+2023/09/07 16:17:39 [debug] 18578#18578: worker cycle
+2023/09/07 16:17:39 [debug] 18578#18578: epoll timer: -1
+2023/09/07 16:17:41 [notice] 17872#17872: signal 15 (SIGTERM) received from 18592, exiting
+2023/09/07 16:17:41 [notice] 18578#18578: signal 15 (SIGTERM) received from 18592, exiting
+2023/09/07 16:17:41 [debug] 17872#17872: wake up, sigio 0
+2023/09/07 16:17:41 [debug] 17872#17872: child: 0 18578 e:0 t:0 d:0 r:1 j:0
+2023/09/07 16:17:41 [info] 18578#18578: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:17:41 [debug] 18578#18578: timer delta: 1799
+2023/09/07 16:17:41 [notice] 18578#18578: exiting
+2023/09/07 16:17:41 [debug] 18578#18578: flush files
+2023/09/07 16:17:41 [debug] 17872#17872: termination cycle: 50
+2023/09/07 16:17:41 [debug] 18578#18578: run cleanup: 000000000079EB60
+2023/09/07 16:17:41 [debug] 18578#18578: run cleanup: 000000000079B410
+2023/09/07 16:17:41 [debug] 18578#18578: cleanup resolver
+2023/09/07 16:17:41 [debug] 17872#17872: sigsuspend
+2023/09/07 16:17:41 [debug] 18578#18578: free: 00000000007A0060
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000079EE90
+2023/09/07 16:17:41 [debug] 18578#18578: free: 0000000000795E60
+2023/09/07 16:17:41 [debug] 18578#18578: free: 0000000000794970
+2023/09/07 16:17:41 [debug] 18578#18578: free: 0000000000792950
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000078D880
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000078C7C0
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000078B700
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000077B480, unused: 0
+2023/09/07 16:17:41 [debug] 18578#18578: free: 00000000007844B0, unused: 0
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000078E940, unused: 1
+2023/09/07 16:17:41 [debug] 18578#18578: free: 0000000000796E70, unused: 0
+2023/09/07 16:17:41 [debug] 18578#18578: free: 000000000079AE80, unused: 776
+2023/09/07 16:17:41 [notice] 18578#18578: exit
+2023/09/07 16:17:41 [notice] 17872#17872: signal 17 (SIGCHLD) received from 18578
+2023/09/07 16:17:41 [notice] 17872#17872: worker process 18578 exited with code 0
+2023/09/07 16:17:41 [debug] 17872#17872: shmtx forced unlock
+2023/09/07 16:17:41 [debug] 17872#17872: wake up, sigio 3
+2023/09/07 16:17:41 [debug] 17872#17872: reap children
+2023/09/07 16:17:41 [debug] 17872#17872: child: 0 18578 e:1 t:1 d:0 r:1 j:0
+2023/09/07 16:17:41 [notice] 17872#17872: exit
+2023/09/07 16:17:41 [debug] 17872#17872: close listening 0.0.0.0:8882 #8 
+2023/09/07 16:17:41 [debug] 17872#17872: run cleanup: 000000000079B410
+2023/09/07 16:17:41 [debug] 17872#17872: cleanup resolver
+2023/09/07 16:17:41 [debug] 17872#17872: free: 00000000007A0060
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000079EE90
+2023/09/07 16:17:41 [debug] 17872#17872: free: 0000000000795E60
+2023/09/07 16:17:41 [debug] 17872#17872: free: 0000000000794970
+2023/09/07 16:17:41 [debug] 17872#17872: free: 0000000000792950
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000078D880
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000078C7C0
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000078B700
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000077B480, unused: 0
+2023/09/07 16:17:41 [debug] 17872#17872: free: 00000000007844B0, unused: 0
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000078E940, unused: 1
+2023/09/07 16:17:41 [debug] 17872#17872: free: 0000000000796E70, unused: 0
+2023/09/07 16:17:41 [debug] 17872#17872: free: 000000000079AE80, unused: 800
+2023/09/07 16:17:44 [debug] 18625#18625: bind() 0.0.0.0:8882 #8 
+2023/09/07 16:17:44 [notice] 18625#18625: using the "epoll" event method
+2023/09/07 16:17:44 [debug] 18625#18625: counter: 00007FFFF7FF8080, 1
+2023/09/07 16:17:44 [notice] 18625#18625: nginx/1.20.0
+2023/09/07 16:17:44 [notice] 18625#18625: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 16:17:44 [notice] 18625#18625: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 16:17:44 [notice] 18625#18625: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 16:17:44 [debug] 18717#18717: write: 9, 00007FFFFFFFDB20, 6, 0
+2023/09/07 16:17:44 [debug] 18717#18717: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 16:17:44 [notice] 18717#18717: start worker processes
+2023/09/07 16:17:44 [debug] 18717#18717: channel 5:9
+2023/09/07 16:17:44 [notice] 18717#18717: start worker process 18731
+2023/09/07 16:17:44 [debug] 18717#18717: sigsuspend
+2023/09/07 16:17:44 [debug] 18731#18731: add cleanup: 000000000079EB60
+2023/09/07 16:17:44 [debug] 18731#18731: malloc: 000000000077A2A0:8
+2023/09/07 16:17:44 [debug] 18731#18731: notify eventfd: 11
+2023/09/07 16:17:44 [debug] 18731#18731: testing the EPOLLRDHUP flag: success
+2023/09/07 16:17:44 [debug] 18731#18731: malloc: 00000000007884C0:6144
+2023/09/07 16:17:44 [debug] 18731#18731: malloc: 00007FFFF7F9C010:245760
+2023/09/07 16:17:44 [debug] 18731#18731: malloc: 00000000007A18B0:98304
+2023/09/07 16:17:44 [debug] 18731#18731: malloc: 00000000007B98C0:98304
+2023/09/07 16:17:44 [debug] 18731#18731: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 16:17:44 [debug] 18731#18731: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 16:17:44 [debug] 18731#18731: setproctitle: "nginx: worker process"
+2023/09/07 16:17:44 [debug] 18731#18731: worker cycle
+2023/09/07 16:17:44 [debug] 18731#18731: epoll timer: -1
+2023/09/07 16:18:19 [info] 18731#18731: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:18:19 [debug] 18731#18731: timer delta: 34731
+2023/09/07 16:18:19 [debug] 18731#18731: worker cycle
+2023/09/07 16:18:19 [debug] 18731#18731: epoll timer: -1
+2023/09/07 16:29:58 [debug] 18731#18731: epoll: fd:8 ev:0001 d:00007FFFF7F9C010
+2023/09/07 16:29:58 [debug] 18731#18731: accept on 0.0.0.0:8882, ready: 0
+2023/09/07 16:29:58 [debug] 18731#18731: posix_memalign: 000000000077A2C0:512 @16
+2023/09/07 16:29:58 [debug] 18731#18731: *1 accept: 192.168.2.3:53052 fd:5
+2023/09/07 16:29:58 [debug] 18731#18731: *1 event timer add: 5: 60000:1786382730
+2023/09/07 16:29:58 [debug] 18731#18731: *1 reusable connection: 1
+2023/09/07 16:29:58 [debug] 18731#18731: *1 epoll add event: fd:5 op:1 ev:80002001
+2023/09/07 16:29:58 [debug] 18731#18731: timer delta: 699081
+2023/09/07 16:29:58 [debug] 18731#18731: worker cycle
+2023/09/07 16:29:58 [debug] 18731#18731: epoll timer: 60000
+2023/09/07 16:31:34 [debug] 18731#18731: epoll: fd:5 ev:0001 d:00007FFFF7F9C1F0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http wait request handler
+2023/09/07 16:31:34 [debug] 18731#18731: *1 malloc: 0000000000793960:1024
+2023/09/07 16:31:34 [debug] 18731#18731: *1 recv: eof:0, avail:-1
+2023/09/07 16:31:34 [debug] 18731#18731: *1 recv: fd:5 81 of 1024
+2023/09/07 16:31:34 [debug] 18731#18731: *1 reusable connection: 0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 posix_memalign: 0000000000789CD0:4096 @16
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http process request line
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http request line: "GET / HTTP/1.1"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http uri: "/"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http args: ""
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http exten: ""
+2023/09/07 16:31:34 [debug] 18731#18731: *1 posix_memalign: 000000000077F490:4096 @16
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http process request header line
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http header: "User-Agent: curl/7.29.0"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http header: "Host: 192.168.2.33:8882"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http header: "Accept: */*"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http header done
+2023/09/07 16:31:34 [debug] 18731#18731: *1 event timer del: 5: 1786382730
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 rewrite phase: 1
+2023/09/07 16:31:34 [debug] 18731#18731: *1 test location: "/"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 using configuration "/"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http cl:-1 max:1048576
+2023/09/07 16:31:34 [debug] 18731#18731: *1 rewrite phase: 3
+2023/09/07 16:31:34 [debug] 18731#18731: *1 post rewrite phase: 4
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 5
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 6
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 7
+2023/09/07 16:31:34 [debug] 18731#18731: *1 access phase: 8
+2023/09/07 16:31:34 [debug] 18731#18731: *1 access phase: 9
+2023/09/07 16:31:34 [debug] 18731#18731: *1 post access phase: 10
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 11
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 12
+2023/09/07 16:31:34 [debug] 18731#18731: *1 content phase: 13
+2023/09/07 16:31:34 [debug] 18731#18731: *1 open index "/usr/local/nginx/html/index.html"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 internal redirect: "/index.html?"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 rewrite phase: 1
+2023/09/07 16:31:34 [debug] 18731#18731: *1 test location: "/"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 test location: "50x.html"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 using configuration "/"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http cl:-1 max:1048576
+2023/09/07 16:31:34 [debug] 18731#18731: *1 rewrite phase: 3
+2023/09/07 16:31:34 [debug] 18731#18731: *1 post rewrite phase: 4
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 5
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 6
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 7
+2023/09/07 16:31:34 [debug] 18731#18731: *1 access phase: 8
+2023/09/07 16:31:34 [debug] 18731#18731: *1 access phase: 9
+2023/09/07 16:31:34 [debug] 18731#18731: *1 post access phase: 10
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 11
+2023/09/07 16:31:34 [debug] 18731#18731: *1 generic phase: 12
+2023/09/07 16:31:34 [debug] 18731#18731: *1 content phase: 13
+2023/09/07 16:31:34 [debug] 18731#18731: *1 content phase: 14
+2023/09/07 16:31:34 [debug] 18731#18731: *1 content phase: 15
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http filename: "/usr/local/nginx/html/index.html"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 add cleanup: 000000000078A9A8
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http static fd: 12
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http set discard body
+2023/09/07 16:31:34 [debug] 18731#18731: *1 HTTP/1.1 200 OK
+Server: nginx/1.20.0
+Date: Thu, 07 Sep 2023 08:31:34 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Sat, 02 Sep 2023 09:07:05 GMT
+Connection: keep-alive
+ETag: "64f2fb39-267"
+Accept-Ranges: bytes
+
+2023/09/07 16:31:34 [debug] 18731#18731: *1 write new buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http write filter: l:0 f:0 s:238
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http output filter "/index.html?"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http copy filter: "/index.html?"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http postpone filter "/index.html?" 00007FFFFFFFD4A0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 write old buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 write new buf t:0 f:1 0000000000000000, pos 0000000000000000, size: 0 file: 0, size: 615
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http write filter: l:1 f:0 s:853
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http write filter limit 0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 writev: 238 of 238
+2023/09/07 16:31:34 [debug] 18731#18731: *1 sendfile: @0 615
+2023/09/07 16:31:34 [debug] 18731#18731: *1 sendfile: 615 of 615 @0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http write filter 0000000000000000
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http copy filter: 0 "/index.html?"
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http finalize request: 0, "/index.html?" a:1, c:2
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http request count:2 blk:0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http finalize request: -4, "/index.html?" a:1, c:1
+2023/09/07 16:31:34 [debug] 18731#18731: *1 set http keepalive handler
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http close request
+2023/09/07 16:31:34 [debug] 18731#18731: *1 http log handler
+2023/09/07 16:31:34 [debug] 18731#18731: *1 run cleanup: 000000000078A9A8
+2023/09/07 16:31:34 [debug] 18731#18731: *1 file cleanup: fd:12
+2023/09/07 16:31:34 [debug] 18731#18731: *1 free: 0000000000789CD0, unused: 40
+2023/09/07 16:31:34 [debug] 18731#18731: *1 free: 000000000077F490, unused: 2862
+2023/09/07 16:31:34 [debug] 18731#18731: *1 free: 0000000000793960
+2023/09/07 16:31:34 [debug] 18731#18731: *1 hc free: 0000000000000000
+2023/09/07 16:31:34 [debug] 18731#18731: *1 hc busy: 0000000000000000 0
+2023/09/07 16:31:34 [debug] 18731#18731: *1 tcp_nodelay
+2023/09/07 16:31:34 [debug] 18731#18731: *1 reusable connection: 1
+2023/09/07 16:31:34 [debug] 18731#18731: *1 event timer add: 5: 65000:1786483613
+2023/09/07 16:31:34 [debug] 18731#18731: timer delta: 95883
+2023/09/07 16:31:34 [debug] 18731#18731: worker cycle
+2023/09/07 16:31:34 [debug] 18731#18731: epoll timer: 65000
+2023/09/07 16:31:36 [debug] 18731#18731: epoll: fd:5 ev:2001 d:00007FFFF7F9C1F0
+2023/09/07 16:31:36 [debug] 18731#18731: *1 http keepalive handler
+2023/09/07 16:31:36 [debug] 18731#18731: *1 malloc: 0000000000793960:1024
+2023/09/07 16:31:36 [debug] 18731#18731: *1 recv: eof:1, avail:-1
+2023/09/07 16:31:36 [debug] 18731#18731: *1 recv: fd:5 0 of 1024
+2023/09/07 16:31:36 [info] 18731#18731: *1 client 192.168.2.3 closed keepalive connection
+2023/09/07 16:31:36 [debug] 18731#18731: *1 close http connection: 5
+2023/09/07 16:31:36 [debug] 18731#18731: *1 event timer del: 5: 1786483613
+2023/09/07 16:31:36 [debug] 18731#18731: *1 reusable connection: 0
+2023/09/07 16:31:36 [debug] 18731#18731: *1 free: 0000000000793960
+2023/09/07 16:31:36 [debug] 18731#18731: *1 free: 000000000077A2C0, unused: 136
+2023/09/07 16:31:36 [debug] 18731#18731: timer delta: 2097
+2023/09/07 16:31:36 [debug] 18731#18731: worker cycle
+2023/09/07 16:31:36 [debug] 18731#18731: epoll timer: -1
+2023/09/07 16:38:40 [info] 18731#18731: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:38:40 [debug] 18731#18731: timer delta: 423896
+2023/09/07 16:38:40 [debug] 18731#18731: worker cycle
+2023/09/07 16:38:40 [debug] 18731#18731: epoll timer: -1
+2023/09/07 16:46:34 [info] 18731#18731: epoll_wait() failed (4: Interrupted system call)
+2023/09/07 16:46:34 [debug] 18731#18731: timer delta: 474619
+2023/09/07 16:46:34 [debug] 18731#18731: worker cycle
+2023/09/07 16:46:34 [debug] 18731#18731: epoll timer: -1
+2023/09/07 16:47:36 [debug] 18731#18731: epoll: fd:8 ev:0001 d:00007FFFF7F9C010
+2023/09/07 16:47:36 [debug] 18731#18731: accept on 0.0.0.0:8882, ready: 0
+2023/09/07 16:47:36 [debug] 18731#18731: posix_memalign: 000000000077A2C0:512 @16
+2023/09/07 16:47:36 [debug] 18731#18731: *2 accept: 192.168.2.3:53054 fd:5
+2023/09/07 16:47:36 [debug] 18731#18731: *2 event timer add: 5: 60000:1787441271
+2023/09/07 16:47:36 [debug] 18731#18731: *2 reusable connection: 1
+2023/09/07 16:47:36 [debug] 18731#18731: *2 epoll add event: fd:5 op:1 ev:80002001
+2023/09/07 16:47:36 [debug] 18731#18731: timer delta: 62046
+2023/09/07 16:47:36 [debug] 18731#18731: worker cycle
+2023/09/07 16:47:36 [debug] 18731#18731: epoll timer: 60000
+2023/09/07 16:52:53 [debug] 18731#18731: epoll: fd:5 ev:0001 d:00007FFFF7F9C1F1
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http wait request handler
+2023/09/07 16:52:53 [debug] 18731#18731: *2 malloc: 0000000000793960:1024
+2023/09/07 16:52:53 [debug] 18731#18731: *2 recv: eof:0, avail:-1
+2023/09/07 16:52:53 [debug] 18731#18731: *2 recv: fd:5 81 of 1024
+2023/09/07 16:52:53 [debug] 18731#18731: *2 reusable connection: 0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 posix_memalign: 0000000000789CD0:4096 @16
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http process request line
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http request line: "GET / HTTP/1.1"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http uri: "/"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http args: ""
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http exten: ""
+2023/09/07 16:52:53 [debug] 18731#18731: *2 posix_memalign: 000000000077F490:4096 @16
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http process request header line
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http header: "User-Agent: curl/7.29.0"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http header: "Host: 192.168.2.33:8882"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http header: "Accept: */*"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http header done
+2023/09/07 16:52:53 [debug] 18731#18731: *2 event timer del: 5: 1787441271
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 rewrite phase: 1
+2023/09/07 16:52:53 [debug] 18731#18731: *2 test location: "/"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 using configuration "/"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http cl:-1 max:1048576
+2023/09/07 16:52:53 [debug] 18731#18731: *2 rewrite phase: 3
+2023/09/07 16:52:53 [debug] 18731#18731: *2 post rewrite phase: 4
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 5
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 6
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 7
+2023/09/07 16:52:53 [debug] 18731#18731: *2 access phase: 8
+2023/09/07 16:52:53 [debug] 18731#18731: *2 access phase: 9
+2023/09/07 16:52:53 [debug] 18731#18731: *2 post access phase: 10
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 11
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 12
+2023/09/07 16:52:53 [debug] 18731#18731: *2 content phase: 13
+2023/09/07 16:52:53 [debug] 18731#18731: *2 open index "/usr/local/nginx/html/index.html"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 internal redirect: "/index.html?"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 rewrite phase: 1
+2023/09/07 16:52:53 [debug] 18731#18731: *2 test location: "/"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 test location: "50x.html"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 using configuration "/"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http cl:-1 max:1048576
+2023/09/07 16:52:53 [debug] 18731#18731: *2 rewrite phase: 3
+2023/09/07 16:52:53 [debug] 18731#18731: *2 post rewrite phase: 4
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 5
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 6
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 7
+2023/09/07 16:52:53 [debug] 18731#18731: *2 access phase: 8
+2023/09/07 16:52:53 [debug] 18731#18731: *2 access phase: 9
+2023/09/07 16:52:53 [debug] 18731#18731: *2 post access phase: 10
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 11
+2023/09/07 16:52:53 [debug] 18731#18731: *2 generic phase: 12
+2023/09/07 16:52:53 [debug] 18731#18731: *2 content phase: 13
+2023/09/07 16:52:53 [debug] 18731#18731: *2 content phase: 14
+2023/09/07 16:52:53 [debug] 18731#18731: *2 content phase: 15
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http filename: "/usr/local/nginx/html/index.html"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 add cleanup: 000000000078A9A8
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http static fd: 12
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http set discard body
+2023/09/07 16:52:53 [debug] 18731#18731: *2 HTTP/1.1 200 OK
+Server: nginx/1.20.0
+Date: Thu, 07 Sep 2023 08:52:53 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Sat, 02 Sep 2023 09:07:05 GMT
+Connection: keep-alive
+ETag: "64f2fb39-267"
+Accept-Ranges: bytes
+
+2023/09/07 16:52:53 [debug] 18731#18731: *2 write new buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http write filter: l:0 f:0 s:238
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http output filter "/index.html?"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http copy filter: "/index.html?"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http postpone filter "/index.html?" 00007FFFFFFFD4A0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 write old buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 write new buf t:0 f:1 0000000000000000, pos 0000000000000000, size: 0 file: 0, size: 615
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http write filter: l:1 f:0 s:853
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http write filter limit 0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 writev: 238 of 238
+2023/09/07 16:52:53 [debug] 18731#18731: *2 sendfile: @0 615
+2023/09/07 16:52:53 [debug] 18731#18731: *2 sendfile: 615 of 615 @0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http write filter 0000000000000000
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http copy filter: 0 "/index.html?"
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http finalize request: 0, "/index.html?" a:1, c:2
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http request count:2 blk:0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http finalize request: -4, "/index.html?" a:1, c:1
+2023/09/07 16:52:53 [debug] 18731#18731: *2 set http keepalive handler
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http close request
+2023/09/07 16:52:53 [debug] 18731#18731: *2 http log handler
+2023/09/07 16:52:53 [debug] 18731#18731: *2 run cleanup: 000000000078A9A8
+2023/09/07 16:52:53 [debug] 18731#18731: *2 file cleanup: fd:12
+2023/09/07 16:52:53 [debug] 18731#18731: *2 free: 0000000000789CD0, unused: 40
+2023/09/07 16:52:53 [debug] 18731#18731: *2 free: 000000000077F490, unused: 2862
+2023/09/07 16:52:53 [debug] 18731#18731: *2 free: 0000000000793960
+2023/09/07 16:52:53 [debug] 18731#18731: *2 hc free: 0000000000000000
+2023/09/07 16:52:53 [debug] 18731#18731: *2 hc busy: 0000000000000000 0
+2023/09/07 16:52:53 [debug] 18731#18731: *2 tcp_nodelay
+2023/09/07 16:52:53 [debug] 18731#18731: *2 reusable connection: 1
+2023/09/07 16:52:53 [debug] 18731#18731: *2 event timer add: 5: 65000:1787762673
+2023/09/07 16:52:53 [debug] 18731#18731: timer delta: 316402
+2023/09/07 16:52:53 [debug] 18731#18731: worker cycle
+2023/09/07 16:52:53 [debug] 18731#18731: epoll timer: 65000
+2023/09/07 16:57:53 [debug] 18731#18731: epoll: fd:5 ev:2001 d:00007FFFF7F9C1F1
+2023/09/07 16:57:53 [debug] 18731#18731: *2 http keepalive handler
+2023/09/07 16:57:53 [debug] 18731#18731: *2 malloc: 0000000000793960:1024
+2023/09/07 16:57:53 [debug] 18731#18731: *2 recv: eof:1, avail:-1
+2023/09/07 16:57:53 [debug] 18731#18731: *2 recv: fd:5 0 of 1024
+2023/09/07 16:57:53 [info] 18731#18731: *2 client 192.168.2.3 closed keepalive connection
+2023/09/07 16:57:53 [debug] 18731#18731: *2 close http connection: 5
+2023/09/07 16:57:53 [debug] 18731#18731: *2 event timer del: 5: 1787762673
+2023/09/07 16:57:53 [debug] 18731#18731: *2 reusable connection: 0
+2023/09/07 16:57:53 [debug] 18731#18731: *2 free: 0000000000793960
+2023/09/07 16:57:53 [debug] 18731#18731: *2 free: 000000000077A2C0, unused: 136
+2023/09/07 16:57:53 [debug] 18731#18731: timer delta: 300767
+2023/09/07 16:57:53 [debug] 18731#18731: worker cycle
+2023/09/07 16:57:53 [debug] 18731#18731: epoll timer: -1
+2023/09/07 17:21:45 [notice] 18717#18717: signal 17 (SIGCHLD) received from 18731
+2023/09/07 17:21:45 [alert] 18717#18717: worker process 18731 exited on signal 9
+2023/09/07 17:21:45 [debug] 18717#18717: shmtx forced unlock
+2023/09/07 17:21:45 [debug] 18717#18717: wake up, sigio 0
+2023/09/07 17:21:45 [debug] 18717#18717: reap children
+2023/09/07 17:21:45 [debug] 18717#18717: child: 0 18731 e:0 t:1 d:0 r:1 j:0
+2023/09/07 17:21:45 [debug] 18717#18717: channel 5:9
+2023/09/07 17:21:45 [notice] 18717#18717: start worker process 32593
+2023/09/07 17:21:45 [debug] 18717#18717: sigsuspend
+2023/09/07 17:21:45 [debug] 32593#32593: add cleanup: 000000000079EB60
+2023/09/07 17:21:45 [debug] 32593#32593: malloc: 000000000077A2A0:8
+2023/09/07 17:21:45 [debug] 32593#32593: notify eventfd: 11
+2023/09/07 17:21:45 [debug] 32593#32593: testing the EPOLLRDHUP flag: success
+2023/09/07 17:21:45 [debug] 32593#32593: malloc: 00000000007884C0:6144
+2023/09/07 17:21:45 [debug] 32593#32593: malloc: 00007FFFF7F9C010:245760
+2023/09/07 17:21:45 [debug] 32593#32593: malloc: 00000000007A18B0:98304
+2023/09/07 17:21:45 [debug] 32593#32593: malloc: 00000000007B98C0:98304
+2023/09/07 17:21:45 [debug] 32593#32593: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 17:21:45 [debug] 32593#32593: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 17:21:45 [debug] 32593#32593: setproctitle: "nginx: worker process"
+2023/09/07 17:21:45 [debug] 32593#32593: worker cycle
+2023/09/07 17:21:45 [debug] 32593#32593: epoll timer: -1
+2023/09/07 17:21:47 [notice] 18717#18717: signal 15 (SIGTERM) received from 32613, exiting
+2023/09/07 17:21:47 [debug] 18717#18717: wake up, sigio 0
+2023/09/07 17:21:47 [debug] 18717#18717: child: 0 32593 e:0 t:0 d:0 r:1 j:0
+2023/09/07 17:21:47 [debug] 18717#18717: termination cycle: 50
+2023/09/07 17:21:47 [debug] 18717#18717: sigsuspend
+2023/09/07 17:21:47 [notice] 32593#32593: signal 15 (SIGTERM) received from 32613, exiting
+2023/09/07 17:21:47 [debug] 32593#32593: epoll: fd:9 ev:0001 d:00007FFFF7F9C100
+2023/09/07 17:21:47 [debug] 32593#32593: channel handler
+2023/09/07 17:21:47 [debug] 32593#32593: channel: 32
+2023/09/07 17:21:47 [debug] 32593#32593: channel command: 4
+2023/09/07 17:21:47 [debug] 32593#32593: channel: -2
+2023/09/07 17:21:47 [debug] 32593#32593: timer delta: 1709
+2023/09/07 17:21:47 [notice] 32593#32593: exiting
+2023/09/07 17:21:47 [debug] 32593#32593: flush files
+2023/09/07 17:21:47 [debug] 32593#32593: run cleanup: 000000000079EB60
+2023/09/07 17:21:47 [debug] 32593#32593: run cleanup: 000000000079B410
+2023/09/07 17:21:47 [debug] 32593#32593: cleanup resolver
+2023/09/07 17:21:47 [debug] 32593#32593: free: 00000000007A0060
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000079EE90
+2023/09/07 17:21:47 [debug] 32593#32593: free: 0000000000795E60
+2023/09/07 17:21:47 [debug] 32593#32593: free: 0000000000794970
+2023/09/07 17:21:47 [debug] 32593#32593: free: 0000000000792950
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000078D880
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000078C7C0
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000078B700
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000077B480, unused: 0
+2023/09/07 17:21:47 [debug] 32593#32593: free: 00000000007844B0, unused: 0
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000078E940, unused: 1
+2023/09/07 17:21:47 [debug] 32593#32593: free: 0000000000796E70, unused: 0
+2023/09/07 17:21:47 [debug] 32593#32593: free: 000000000079AE80, unused: 776
+2023/09/07 17:21:47 [notice] 32593#32593: exit
+2023/09/07 17:21:47 [notice] 18717#18717: signal 17 (SIGCHLD) received from 32593
+2023/09/07 17:21:47 [notice] 18717#18717: worker process 32593 exited with code 0
+2023/09/07 17:21:47 [debug] 18717#18717: shmtx forced unlock
+2023/09/07 17:21:47 [debug] 18717#18717: wake up, sigio 3
+2023/09/07 17:21:47 [debug] 18717#18717: reap children
+2023/09/07 17:21:47 [debug] 18717#18717: child: 0 32593 e:1 t:1 d:0 r:1 j:0
+2023/09/07 17:21:47 [notice] 18717#18717: exit
+2023/09/07 17:21:47 [debug] 18717#18717: close listening 0.0.0.0:8882 #8 
+2023/09/07 17:21:47 [debug] 18717#18717: run cleanup: 000000000079B410
+2023/09/07 17:21:47 [debug] 18717#18717: cleanup resolver
+2023/09/07 17:21:47 [debug] 18717#18717: free: 00000000007A0060
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000079EE90
+2023/09/07 17:21:47 [debug] 18717#18717: free: 0000000000795E60
+2023/09/07 17:21:47 [debug] 18717#18717: free: 0000000000794970
+2023/09/07 17:21:47 [debug] 18717#18717: free: 0000000000792950
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000078D880
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000078C7C0
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000078B700
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000077B480, unused: 0
+2023/09/07 17:21:47 [debug] 18717#18717: free: 00000000007844B0, unused: 0
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000078E940, unused: 1
+2023/09/07 17:21:47 [debug] 18717#18717: free: 0000000000796E70, unused: 0
+2023/09/07 17:21:47 [debug] 18717#18717: free: 000000000079AE80, unused: 800
+2023/09/07 17:21:49 [debug] 32646#32646: bind() 0.0.0.0:8882 #8 
+2023/09/07 17:21:49 [notice] 32646#32646: using the "epoll" event method
+2023/09/07 17:21:49 [debug] 32646#32646: counter: 00007FFFF7FF8080, 1
+2023/09/07 17:21:49 [notice] 32646#32646: nginx/1.20.0
+2023/09/07 17:21:49 [notice] 32646#32646: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 17:21:49 [notice] 32646#32646: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 17:21:49 [notice] 32646#32646: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 17:21:49 [debug] 433#433: write: 9, 00007FFFFFFFDB20, 4, 0
+2023/09/07 17:21:49 [debug] 433#433: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 17:21:49 [notice] 433#433: start worker processes
+2023/09/07 17:21:49 [debug] 433#433: channel 5:9
+2023/09/07 17:21:49 [notice] 433#433: start worker process 561
+2023/09/07 17:21:49 [debug] 433#433: sigsuspend
+2023/09/07 17:21:49 [debug] 561#561: add cleanup: 000000000079EB60
+2023/09/07 17:21:49 [debug] 561#561: malloc: 000000000077A2A0:8
+2023/09/07 17:21:49 [debug] 561#561: notify eventfd: 11
+2023/09/07 17:21:49 [debug] 561#561: testing the EPOLLRDHUP flag: success
+2023/09/07 17:21:49 [debug] 561#561: malloc: 00000000007884C0:6144
+2023/09/07 17:21:49 [debug] 561#561: malloc: 00007FFFF7F9C010:245760
+2023/09/07 17:21:49 [debug] 561#561: malloc: 00000000007A18B0:98304
+2023/09/07 17:21:49 [debug] 561#561: malloc: 00000000007B98C0:98304
+2023/09/07 17:21:49 [debug] 561#561: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 17:21:49 [debug] 561#561: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 17:21:49 [debug] 561#561: setproctitle: "nginx: worker process"
+2023/09/07 17:21:49 [debug] 561#561: worker cycle
+2023/09/07 17:21:49 [debug] 561#561: epoll timer: -1
+2023/09/07 17:22:47 [debug] 561#561: epoll: fd:8 ev:0001 d:00007FFFF7F9C010
+2023/09/07 17:22:47 [debug] 561#561: accept on 0.0.0.0:8882, ready: 0
+2023/09/07 17:22:47 [debug] 561#561: posix_memalign: 000000000077A2C0:512 @16
+2023/09/07 17:22:47 [debug] 561#561: *1 accept: 192.168.2.3:53056 fd:5
+2023/09/07 17:22:47 [debug] 561#561: *1 event timer add: 5: 60000:1789551812
+2023/09/07 17:22:47 [debug] 561#561: *1 reusable connection: 1
+2023/09/07 17:22:47 [debug] 561#561: *1 epoll add event: fd:5 op:1 ev:80002001
+2023/09/07 17:22:47 [debug] 561#561: timer delta: 57381
+2023/09/07 17:22:47 [debug] 561#561: worker cycle
+2023/09/07 17:22:47 [debug] 561#561: epoll timer: 60000
+2023/09/07 17:24:10 [debug] 561#561: epoll: fd:5 ev:0001 d:00007FFFF7F9C1F0
+2023/09/07 17:24:10 [debug] 561#561: *1 http wait request handler
+2023/09/07 17:24:10 [debug] 561#561: *1 malloc: 0000000000793960:1024
+2023/09/07 17:24:10 [debug] 561#561: *1 recv: eof:0, avail:-1
+2023/09/07 17:24:10 [debug] 561#561: *1 recv: fd:5 81 of 1024
+2023/09/07 17:24:10 [debug] 561#561: *1 reusable connection: 0
+2023/09/07 17:24:10 [debug] 561#561: *1 posix_memalign: 0000000000789CD0:4096 @16
+2023/09/07 17:24:10 [debug] 561#561: *1 http process request line
+2023/09/07 17:24:10 [debug] 561#561: *1 http request line: "GET / HTTP/1.1"
+2023/09/07 17:24:10 [debug] 561#561: *1 http uri: "/"
+2023/09/07 17:24:10 [debug] 561#561: *1 http args: ""
+2023/09/07 17:24:10 [debug] 561#561: *1 http exten: ""
+2023/09/07 17:24:10 [debug] 561#561: *1 posix_memalign: 000000000077F490:4096 @16
+2023/09/07 17:24:10 [debug] 561#561: *1 http process request header line
+2023/09/07 17:24:10 [debug] 561#561: *1 http header: "User-Agent: curl/7.29.0"
+2023/09/07 17:24:10 [debug] 561#561: *1 http header: "Host: 192.168.2.33:8882"
+2023/09/07 17:24:10 [debug] 561#561: *1 http header: "Accept: */*"
+2023/09/07 17:24:10 [debug] 561#561: *1 http header done
+2023/09/07 17:24:10 [debug] 561#561: *1 event timer del: 5: 1789551812
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 0
+2023/09/07 17:24:10 [debug] 561#561: *1 rewrite phase: 1
+2023/09/07 17:24:10 [debug] 561#561: *1 test location: "/"
+2023/09/07 17:24:10 [debug] 561#561: *1 using configuration "/"
+2023/09/07 17:24:10 [debug] 561#561: *1 http cl:-1 max:1048576
+2023/09/07 17:24:10 [debug] 561#561: *1 rewrite phase: 3
+2023/09/07 17:24:10 [debug] 561#561: *1 post rewrite phase: 4
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 5
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 6
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 7
+2023/09/07 17:24:10 [debug] 561#561: *1 access phase: 8
+2023/09/07 17:24:10 [debug] 561#561: *1 access phase: 9
+2023/09/07 17:24:10 [debug] 561#561: *1 post access phase: 10
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 11
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 12
+2023/09/07 17:24:10 [debug] 561#561: *1 content phase: 13
+2023/09/07 17:24:10 [debug] 561#561: *1 open index "/usr/local/nginx/html/index.html"
+2023/09/07 17:24:10 [debug] 561#561: *1 internal redirect: "/index.html?"
+2023/09/07 17:24:10 [debug] 561#561: *1 rewrite phase: 1
+2023/09/07 17:24:10 [debug] 561#561: *1 test location: "/"
+2023/09/07 17:24:10 [debug] 561#561: *1 test location: "50x.html"
+2023/09/07 17:24:10 [debug] 561#561: *1 using configuration "/"
+2023/09/07 17:24:10 [debug] 561#561: *1 http cl:-1 max:1048576
+2023/09/07 17:24:10 [debug] 561#561: *1 rewrite phase: 3
+2023/09/07 17:24:10 [debug] 561#561: *1 post rewrite phase: 4
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 5
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 6
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 7
+2023/09/07 17:24:10 [debug] 561#561: *1 access phase: 8
+2023/09/07 17:24:10 [debug] 561#561: *1 access phase: 9
+2023/09/07 17:24:10 [debug] 561#561: *1 post access phase: 10
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 11
+2023/09/07 17:24:10 [debug] 561#561: *1 generic phase: 12
+2023/09/07 17:24:10 [debug] 561#561: *1 content phase: 13
+2023/09/07 17:24:10 [debug] 561#561: *1 content phase: 14
+2023/09/07 17:24:10 [debug] 561#561: *1 content phase: 15
+2023/09/07 17:24:10 [debug] 561#561: *1 http filename: "/usr/local/nginx/html/index.html"
+2023/09/07 17:24:10 [debug] 561#561: *1 add cleanup: 000000000078A9A8
+2023/09/07 17:24:10 [debug] 561#561: *1 http static fd: 12
+2023/09/07 17:24:10 [debug] 561#561: *1 http set discard body
+2023/09/07 17:24:10 [debug] 561#561: *1 HTTP/1.1 200 OK
+Server: nginx/1.20.0
+Date: Thu, 07 Sep 2023 09:24:10 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Sat, 02 Sep 2023 09:07:05 GMT
+Connection: keep-alive
+ETag: "64f2fb39-267"
+Accept-Ranges: bytes
+
+2023/09/07 17:24:10 [debug] 561#561: *1 write new buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 17:24:10 [debug] 561#561: *1 http write filter: l:0 f:0 s:238
+2023/09/07 17:24:10 [debug] 561#561: *1 http output filter "/index.html?"
+2023/09/07 17:24:10 [debug] 561#561: *1 http copy filter: "/index.html?"
+2023/09/07 17:24:10 [debug] 561#561: *1 http postpone filter "/index.html?" 00007FFFFFFFD4A0
+2023/09/07 17:24:10 [debug] 561#561: *1 write old buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 17:24:10 [debug] 561#561: *1 write new buf t:0 f:1 0000000000000000, pos 0000000000000000, size: 0 file: 0, size: 615
+2023/09/07 17:24:10 [debug] 561#561: *1 http write filter: l:1 f:0 s:853
+2023/09/07 17:24:10 [debug] 561#561: *1 http write filter limit 0
+2023/09/07 17:24:10 [debug] 561#561: *1 writev: 238 of 238
+2023/09/07 17:24:10 [debug] 561#561: *1 sendfile: @0 615
+2023/09/07 17:24:10 [debug] 561#561: *1 sendfile: 615 of 615 @0
+2023/09/07 17:24:10 [debug] 561#561: *1 http write filter 0000000000000000
+2023/09/07 17:24:10 [debug] 561#561: *1 http copy filter: 0 "/index.html?"
+2023/09/07 17:24:10 [debug] 561#561: *1 http finalize request: 0, "/index.html?" a:1, c:2
+2023/09/07 17:24:10 [debug] 561#561: *1 http request count:2 blk:0
+2023/09/07 17:24:10 [debug] 561#561: *1 http finalize request: -4, "/index.html?" a:1, c:1
+2023/09/07 17:24:10 [debug] 561#561: *1 set http keepalive handler
+2023/09/07 17:24:10 [debug] 561#561: *1 http close request
+2023/09/07 17:24:10 [debug] 561#561: *1 http log handler
+2023/09/07 17:24:10 [debug] 561#561: *1 run cleanup: 000000000078A9A8
+2023/09/07 17:24:10 [debug] 561#561: *1 file cleanup: fd:12
+2023/09/07 17:24:10 [debug] 561#561: *1 free: 0000000000789CD0, unused: 40
+2023/09/07 17:24:10 [debug] 561#561: *1 free: 000000000077F490, unused: 2862
+2023/09/07 17:24:10 [debug] 561#561: *1 free: 0000000000793960
+2023/09/07 17:24:10 [debug] 561#561: *1 hc free: 0000000000000000
+2023/09/07 17:24:10 [debug] 561#561: *1 hc busy: 0000000000000000 0
+2023/09/07 17:24:10 [debug] 561#561: *1 tcp_nodelay
+2023/09/07 17:24:10 [debug] 561#561: *1 reusable connection: 1
+2023/09/07 17:24:10 [debug] 561#561: *1 event timer add: 5: 65000:1789639895
+2023/09/07 17:24:10 [debug] 561#561: timer delta: 83083
+2023/09/07 17:24:10 [debug] 561#561: worker cycle
+2023/09/07 17:24:10 [debug] 561#561: epoll timer: 65000
+2023/09/07 17:25:10 [debug] 561#561: epoll: fd:5 ev:2001 d:00007FFFF7F9C1F0
+2023/09/07 17:31:23 [notice] 433#433: signal 17 (SIGCHLD) received from 561
+2023/09/07 17:31:23 [alert] 433#433: worker process 561 exited on signal 9
+2023/09/07 17:31:23 [debug] 433#433: shmtx forced unlock
+2023/09/07 17:31:23 [debug] 433#433: wake up, sigio 0
+2023/09/07 17:31:23 [debug] 433#433: reap children
+2023/09/07 17:31:23 [debug] 433#433: child: 0 561 e:0 t:1 d:0 r:1 j:0
+2023/09/07 17:31:23 [debug] 433#433: channel 5:9
+2023/09/07 17:31:23 [notice] 433#433: start worker process 3029
+2023/09/07 17:31:23 [debug] 433#433: sigsuspend
+2023/09/07 17:31:23 [debug] 3029#3029: add cleanup: 000000000079EB60
+2023/09/07 17:31:23 [debug] 3029#3029: malloc: 000000000077A2A0:8
+2023/09/07 17:31:23 [debug] 3029#3029: notify eventfd: 11
+2023/09/07 17:31:23 [debug] 3029#3029: testing the EPOLLRDHUP flag: success
+2023/09/07 17:31:23 [debug] 3029#3029: malloc: 00000000007884C0:6144
+2023/09/07 17:31:23 [debug] 3029#3029: malloc: 00007FFFF7F9C010:245760
+2023/09/07 17:31:23 [debug] 3029#3029: malloc: 00000000007A18B0:98304
+2023/09/07 17:31:23 [debug] 3029#3029: malloc: 00000000007B98C0:98304
+2023/09/07 17:31:23 [debug] 3029#3029: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 17:31:23 [debug] 3029#3029: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 17:31:23 [debug] 3029#3029: setproctitle: "nginx: worker process"
+2023/09/07 17:31:23 [debug] 3029#3029: worker cycle
+2023/09/07 17:31:23 [debug] 3029#3029: epoll timer: -1
+2023/09/07 17:31:23 [notice] 433#433: signal 15 (SIGTERM) received from 3033, exiting
+2023/09/07 17:31:23 [debug] 433#433: wake up, sigio 0
+2023/09/07 17:31:23 [debug] 433#433: child: 0 3029 e:0 t:0 d:0 r:1 j:0
+2023/09/07 17:31:23 [debug] 433#433: termination cycle: 50
+2023/09/07 17:31:23 [debug] 433#433: sigsuspend
+2023/09/07 17:31:23 [debug] 3029#3029: epoll: fd:9 ev:0001 d:00007FFFF7F9C100
+2023/09/07 17:31:23 [debug] 3029#3029: channel handler
+2023/09/07 17:31:23 [debug] 3029#3029: channel: 32
+2023/09/07 17:31:23 [debug] 3029#3029: channel command: 4
+2023/09/07 17:31:23 [debug] 3029#3029: channel: -2
+2023/09/07 17:31:23 [debug] 3029#3029: timer delta: 610
+2023/09/07 17:31:23 [notice] 3029#3029: exiting
+2023/09/07 17:31:23 [debug] 3029#3029: flush files
+2023/09/07 17:31:23 [debug] 3029#3029: run cleanup: 000000000079EB60
+2023/09/07 17:31:23 [debug] 3029#3029: run cleanup: 000000000079B410
+2023/09/07 17:31:23 [debug] 3029#3029: cleanup resolver
+2023/09/07 17:31:23 [debug] 3029#3029: free: 00000000007A0060
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000079EE90
+2023/09/07 17:31:23 [debug] 3029#3029: free: 0000000000795E60
+2023/09/07 17:31:23 [debug] 3029#3029: free: 0000000000794970
+2023/09/07 17:31:23 [debug] 3029#3029: free: 0000000000792950
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000078D880
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000078C7C0
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000078B700
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000077B480, unused: 0
+2023/09/07 17:31:23 [debug] 3029#3029: free: 00000000007844B0, unused: 0
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000078E940, unused: 1
+2023/09/07 17:31:23 [debug] 3029#3029: free: 0000000000796E70, unused: 0
+2023/09/07 17:31:23 [debug] 3029#3029: free: 000000000079AE80, unused: 776
+2023/09/07 17:31:23 [notice] 3029#3029: exit
+2023/09/07 17:31:23 [notice] 433#433: signal 17 (SIGCHLD) received from 3029
+2023/09/07 17:31:23 [notice] 433#433: worker process 3029 exited with code 0
+2023/09/07 17:31:23 [debug] 433#433: shmtx forced unlock
+2023/09/07 17:31:23 [debug] 433#433: wake up, sigio 3
+2023/09/07 17:31:23 [debug] 433#433: reap children
+2023/09/07 17:31:23 [debug] 433#433: child: 0 3029 e:1 t:1 d:0 r:1 j:0
+2023/09/07 17:31:23 [notice] 433#433: exit
+2023/09/07 17:31:23 [debug] 433#433: close listening 0.0.0.0:8882 #8 
+2023/09/07 17:31:23 [debug] 433#433: run cleanup: 000000000079B410
+2023/09/07 17:31:23 [debug] 433#433: cleanup resolver
+2023/09/07 17:31:23 [debug] 433#433: free: 00000000007A0060
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000079EE90
+2023/09/07 17:31:23 [debug] 433#433: free: 0000000000795E60
+2023/09/07 17:31:23 [debug] 433#433: free: 0000000000794970
+2023/09/07 17:31:23 [debug] 433#433: free: 0000000000792950
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000078D880
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000078C7C0
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000078B700
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000077B480, unused: 0
+2023/09/07 17:31:23 [debug] 433#433: free: 00000000007844B0, unused: 0
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000078E940, unused: 1
+2023/09/07 17:31:23 [debug] 433#433: free: 0000000000796E70, unused: 0
+2023/09/07 17:31:23 [debug] 433#433: free: 000000000079AE80, unused: 800
+2023/09/07 17:31:26 [debug] 3063#3063: bind() 0.0.0.0:8882 #8 
+2023/09/07 17:31:26 [notice] 3063#3063: using the "epoll" event method
+2023/09/07 17:31:26 [debug] 3063#3063: counter: 00007FFFF7FF8080, 1
+2023/09/07 17:31:26 [notice] 3063#3063: nginx/1.20.0
+2023/09/07 17:31:26 [notice] 3063#3063: built by gcc 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+2023/09/07 17:31:26 [notice] 3063#3063: OS: Linux 3.10.0-1160.el7.x86_64
+2023/09/07 17:31:26 [notice] 3063#3063: getrlimit(RLIMIT_NOFILE): 4096:4096
+2023/09/07 17:31:26 [debug] 3271#3271: write: 9, 00007FFFFFFFDB20, 5, 0
+2023/09/07 17:31:26 [debug] 3271#3271: setproctitle: "nginx: master process /usr/local/nginx/sbin/nginx -c /home/nick/code/nginx/debug_dir/nginx.conf -e /home/nick/code/nginx/debug_dir/error.log"
+2023/09/07 17:31:26 [notice] 3271#3271: start worker processes
+2023/09/07 17:31:26 [debug] 3271#3271: channel 5:9
+2023/09/07 17:31:26 [notice] 3271#3271: start worker process 3278
+2023/09/07 17:31:26 [debug] 3271#3271: sigsuspend
+2023/09/07 17:31:26 [debug] 3278#3278: add cleanup: 000000000079EB60
+2023/09/07 17:31:26 [debug] 3278#3278: malloc: 000000000077A2A0:8
+2023/09/07 17:31:26 [debug] 3278#3278: notify eventfd: 11
+2023/09/07 17:31:26 [debug] 3278#3278: testing the EPOLLRDHUP flag: success
+2023/09/07 17:31:26 [debug] 3278#3278: malloc: 00000000007884C0:6144
+2023/09/07 17:31:26 [debug] 3278#3278: malloc: 00007FFFF7F9C010:245760
+2023/09/07 17:31:26 [debug] 3278#3278: malloc: 00000000007A18B0:98304
+2023/09/07 17:31:26 [debug] 3278#3278: malloc: 00000000007B98C0:98304
+2023/09/07 17:31:26 [debug] 3278#3278: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 17:31:26 [debug] 3278#3278: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 17:31:26 [debug] 3278#3278: setproctitle: "nginx: worker process"
+2023/09/07 17:31:26 [debug] 3278#3278: worker cycle
+2023/09/07 17:31:26 [debug] 3278#3278: epoll timer: -1
+2023/09/07 17:32:08 [debug] 3278#3278: epoll: fd:8 ev:0001 d:00007FFFF7F9C010
+2023/09/07 17:32:08 [debug] 3278#3278: accept on 0.0.0.0:8882, ready: 0
+2023/09/07 17:32:08 [debug] 3278#3278: posix_memalign: 000000000077A2C0:512 @16
+2023/09/07 17:32:08 [debug] 3278#3278: *1 accept: 192.168.2.3:53058 fd:5
+2023/09/07 17:32:08 [debug] 3278#3278: *1 event timer add: 5: 60000:1790113078
+2023/09/07 17:32:08 [debug] 3278#3278: *1 reusable connection: 1
+2023/09/07 17:32:08 [debug] 3278#3278: *1 epoll add event: fd:5 op:1 ev:80002001
+2023/09/07 17:32:08 [debug] 3278#3278: timer delta: 42090
+2023/09/07 17:32:08 [debug] 3278#3278: worker cycle
+2023/09/07 17:32:08 [debug] 3278#3278: epoll timer: 60000
+2023/09/07 17:32:18 [debug] 3278#3278: epoll: fd:5 ev:0001 d:00007FFFF7F9C1F0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http wait request handler
+2023/09/07 17:32:18 [debug] 3278#3278: *1 malloc: 0000000000793960:1024
+2023/09/07 17:32:18 [debug] 3278#3278: *1 recv: eof:0, avail:-1
+2023/09/07 17:32:18 [debug] 3278#3278: *1 recv: fd:5 81 of 1024
+2023/09/07 17:32:18 [debug] 3278#3278: *1 reusable connection: 0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 posix_memalign: 0000000000789CD0:4096 @16
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http process request line
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http request line: "GET / HTTP/1.1"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http uri: "/"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http args: ""
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http exten: ""
+2023/09/07 17:32:18 [debug] 3278#3278: *1 posix_memalign: 000000000077F490:4096 @16
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http process request header line
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http header: "User-Agent: curl/7.29.0"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http header: "Host: 192.168.2.33:8882"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http header: "Accept: */*"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http header done
+2023/09/07 17:32:18 [debug] 3278#3278: *1 event timer del: 5: 1790113078
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 rewrite phase: 1
+2023/09/07 17:32:18 [debug] 3278#3278: *1 test location: "/"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 using configuration "/"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http cl:-1 max:1048576
+2023/09/07 17:32:18 [debug] 3278#3278: *1 rewrite phase: 3
+2023/09/07 17:32:18 [debug] 3278#3278: *1 post rewrite phase: 4
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 5
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 6
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 7
+2023/09/07 17:32:18 [debug] 3278#3278: *1 access phase: 8
+2023/09/07 17:32:18 [debug] 3278#3278: *1 access phase: 9
+2023/09/07 17:32:18 [debug] 3278#3278: *1 post access phase: 10
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 11
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 12
+2023/09/07 17:32:18 [debug] 3278#3278: *1 content phase: 13
+2023/09/07 17:32:18 [debug] 3278#3278: *1 open index "/usr/local/nginx/html/index.html"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 internal redirect: "/index.html?"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 rewrite phase: 1
+2023/09/07 17:32:18 [debug] 3278#3278: *1 test location: "/"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 test location: "50x.html"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 using configuration "/"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http cl:-1 max:1048576
+2023/09/07 17:32:18 [debug] 3278#3278: *1 rewrite phase: 3
+2023/09/07 17:32:18 [debug] 3278#3278: *1 post rewrite phase: 4
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 5
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 6
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 7
+2023/09/07 17:32:18 [debug] 3278#3278: *1 access phase: 8
+2023/09/07 17:32:18 [debug] 3278#3278: *1 access phase: 9
+2023/09/07 17:32:18 [debug] 3278#3278: *1 post access phase: 10
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 11
+2023/09/07 17:32:18 [debug] 3278#3278: *1 generic phase: 12
+2023/09/07 17:32:18 [debug] 3278#3278: *1 content phase: 13
+2023/09/07 17:32:18 [debug] 3278#3278: *1 content phase: 14
+2023/09/07 17:32:18 [debug] 3278#3278: *1 content phase: 15
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http filename: "/usr/local/nginx/html/index.html"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 add cleanup: 000000000078A9A8
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http static fd: 12
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http set discard body
+2023/09/07 17:32:18 [debug] 3278#3278: *1 HTTP/1.1 200 OK
+Server: nginx/1.20.0
+Date: Thu, 07 Sep 2023 09:32:18 GMT
+Content-Type: text/html
+Content-Length: 615
+Last-Modified: Sat, 02 Sep 2023 09:07:05 GMT
+Connection: keep-alive
+ETag: "64f2fb39-267"
+Accept-Ranges: bytes
+
+2023/09/07 17:32:18 [debug] 3278#3278: *1 write new buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http write filter: l:0 f:0 s:238
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http output filter "/index.html?"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http copy filter: "/index.html?"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http postpone filter "/index.html?" 00007FFFFFFFD4A0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 write old buf t:1 f:0 000000000078AB88, pos 000000000078AB88, size: 238 file: 0, size: 0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 write new buf t:0 f:1 0000000000000000, pos 0000000000000000, size: 0 file: 0, size: 615
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http write filter: l:1 f:0 s:853
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http write filter limit 0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 writev: 238 of 238
+2023/09/07 17:32:18 [debug] 3278#3278: *1 sendfile: @0 615
+2023/09/07 17:32:18 [debug] 3278#3278: *1 sendfile: 615 of 615 @0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http write filter 0000000000000000
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http copy filter: 0 "/index.html?"
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http finalize request: 0, "/index.html?" a:1, c:2
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http request count:2 blk:0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http finalize request: -4, "/index.html?" a:1, c:1
+2023/09/07 17:32:18 [debug] 3278#3278: *1 set http keepalive handler
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http close request
+2023/09/07 17:32:18 [debug] 3278#3278: *1 http log handler
+2023/09/07 17:32:18 [debug] 3278#3278: *1 run cleanup: 000000000078A9A8
+2023/09/07 17:32:18 [debug] 3278#3278: *1 file cleanup: fd:12
+2023/09/07 17:32:18 [debug] 3278#3278: *1 free: 0000000000789CD0, unused: 40
+2023/09/07 17:32:18 [debug] 3278#3278: *1 free: 000000000077F490, unused: 2862
+2023/09/07 17:32:18 [debug] 3278#3278: *1 free: 0000000000793960
+2023/09/07 17:32:18 [debug] 3278#3278: *1 hc free: 0000000000000000
+2023/09/07 17:32:18 [debug] 3278#3278: *1 hc busy: 0000000000000000 0
+2023/09/07 17:32:18 [debug] 3278#3278: *1 tcp_nodelay
+2023/09/07 17:32:18 [debug] 3278#3278: *1 reusable connection: 1
+2023/09/07 17:32:18 [debug] 3278#3278: *1 event timer add: 5: 65000:1790127544
+2023/09/07 17:32:18 [debug] 3278#3278: timer delta: 9466
+2023/09/07 17:32:18 [debug] 3278#3278: worker cycle
+2023/09/07 17:32:18 [debug] 3278#3278: epoll timer: 65000
+2023/09/07 17:39:37 [debug] 3278#3278: epoll: fd:5 ev:2001 d:00007FFFF7F9C1F0
+2023/09/07 17:39:37 [debug] 3278#3278: *1 http keepalive handler
+2023/09/07 17:39:37 [debug] 3278#3278: *1 malloc: 0000000000793960:1024
+2023/09/07 17:39:37 [debug] 3278#3278: *1 recv: eof:1, avail:-1
+2023/09/07 17:39:37 [debug] 3278#3278: *1 recv: fd:5 0 of 1024
+2023/09/07 17:39:37 [info] 3278#3278: *1 client 192.168.2.3 closed keepalive connection
+2023/09/07 17:39:37 [debug] 3278#3278: *1 close http connection: 5
+2023/09/07 17:39:37 [debug] 3278#3278: *1 event timer del: 5: 1790127544
+2023/09/07 17:39:37 [debug] 3278#3278: *1 reusable connection: 0
+2023/09/07 17:39:37 [debug] 3278#3278: *1 free: 0000000000793960
+2023/09/07 17:39:37 [debug] 3278#3278: *1 free: 000000000077A2C0, unused: 136
+2023/09/07 17:39:37 [debug] 3278#3278: timer delta: 439067
+2023/09/07 17:39:37 [debug] 3278#3278: worker cycle
+2023/09/07 17:39:37 [debug] 3278#3278: epoll timer: -1
+2023/09/07 17:40:30 [notice] 3271#3271: signal 17 (SIGCHLD) received from 3278
+2023/09/07 17:40:30 [alert] 3271#3271: worker process 3278 exited on signal 9
+2023/09/07 17:40:30 [debug] 3271#3271: shmtx forced unlock
+2023/09/07 17:40:30 [debug] 3271#3271: wake up, sigio 0
+2023/09/07 17:40:30 [debug] 3271#3271: reap children
+2023/09/07 17:40:30 [debug] 3271#3271: child: 0 3278 e:0 t:1 d:0 r:1 j:0
+2023/09/07 17:40:30 [debug] 3271#3271: channel 5:9
+2023/09/07 17:40:30 [notice] 3271#3271: start worker process 5231
+2023/09/07 17:40:30 [debug] 3271#3271: sigsuspend
+2023/09/07 17:40:30 [debug] 5231#5231: add cleanup: 000000000079EB60
+2023/09/07 17:40:30 [debug] 5231#5231: malloc: 000000000077A2A0:8
+2023/09/07 17:40:30 [debug] 5231#5231: notify eventfd: 11
+2023/09/07 17:40:30 [debug] 5231#5231: testing the EPOLLRDHUP flag: success
+2023/09/07 17:40:30 [debug] 5231#5231: malloc: 00000000007884C0:6144
+2023/09/07 17:40:30 [debug] 5231#5231: malloc: 00007FFFF7F9C010:245760
+2023/09/07 17:40:30 [debug] 5231#5231: malloc: 00000000007A18B0:98304
+2023/09/07 17:40:30 [debug] 5231#5231: malloc: 00000000007B98C0:98304
+2023/09/07 17:40:30 [debug] 5231#5231: epoll add event: fd:8 op:1 ev:00002001
+2023/09/07 17:40:30 [debug] 5231#5231: epoll add event: fd:9 op:1 ev:00002001
+2023/09/07 17:40:30 [debug] 5231#5231: setproctitle: "nginx: worker process"
+2023/09/07 17:40:30 [debug] 5231#5231: worker cycle
+2023/09/07 17:40:30 [debug] 5231#5231: epoll timer: -1

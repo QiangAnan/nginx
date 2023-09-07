@@ -367,7 +367,7 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
 
     for (i = 0; /* void */ ; i++) {
 
-        if (i >= part->nelts) {
+        if (i >= part->nelts) {    // nelts = 2,  /usr/local/nginx/logs/access.log && /usr/local/nginx/logs/error.log
             if (part->next == NULL) {
                 break;
             }

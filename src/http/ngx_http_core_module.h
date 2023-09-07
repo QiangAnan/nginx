@@ -190,7 +190,7 @@ typedef struct {
 
     size_t                      connection_pool_size;
     size_t                      request_pool_size;
-    size_t                      client_header_buffer_size;
+    size_t                      client_header_buffer_size;   // 1024
 
     ngx_bufs_t                  large_client_header_buffers;
 

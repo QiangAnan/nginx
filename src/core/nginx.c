@@ -204,15 +204,15 @@ main(int argc, char *const *argv)
 
     ngx_debug_init();
 
-    if (ngx_strerror_init() != NGX_OK) {
+    if (ngx_strerror_init() != NGX_OK) {  // 初始化错误码，默认135个错误码对应的错误字符串， 保存在ngx_sys_errlist中
         return 1;
     }
 
-    if (ngx_get_options(argc, argv) != NGX_OK) {
+    if (ngx_get_options(argc, argv) != NGX_OK) {  // argv： /usr/local/nginx/sbin/nginx
         return 1;
     }
 
-    if (ngx_show_version) {
+    if (ngx_show_version) {  // 0
         ngx_show_version_info();
 
         if (!ngx_test_config) {
@@ -225,13 +225,13 @@ main(int argc, char *const *argv)
     ngx_time_init();
 
 #if (NGX_PCRE)
-    ngx_regex_init();
+    ngx_regex_init();  // 注册malloc和free回调函数
 #endif
 
     ngx_pid = ngx_getpid();
     ngx_parent = ngx_getppid();
 
-    log = ngx_log_init(ngx_prefix, ngx_error_log);
+    log = ngx_log_init(ngx_prefix, ngx_error_log);  // Open error.log
     if (log == NULL) {
         return 1;
     }
@@ -255,7 +255,7 @@ main(int argc, char *const *argv)
         return 1;
     }
 
-    if (ngx_save_argv(&init_cycle, argc, argv) != NGX_OK) {
+    if (ngx_save_argv(&init_cycle, argc, argv) != NGX_OK) {  // 参数保存到 ngx_argv
         return 1;
     }
 
@@ -285,6 +285,7 @@ main(int argc, char *const *argv)
         return 1;
     }
 
+    // 初始化module名字， 由编译生成的objs/ngx_modules.c决定
     if (ngx_preinit_modules() != NGX_OK) {
         return 1;
     }
@@ -359,6 +360,7 @@ main(int argc, char *const *argv)
 
 #endif
 
+    // log文件夹下的nginx.pid文件
     if (ngx_create_pidfile(&ccf->pid, cycle->log) != NGX_OK) {
         return 1;
     }
@@ -985,7 +987,7 @@ ngx_process_options(ngx_cycle_t *cycle)
 #else
 
 #ifdef NGX_CONF_PREFIX
-        ngx_str_set(&cycle->conf_prefix, NGX_CONF_PREFIX);
+        ngx_str_set(&cycle->conf_prefix, NGX_CONF_PREFIX); 
 #else
         ngx_str_set(&cycle->conf_prefix, NGX_PREFIX);
 #endif
@@ -1012,7 +1014,7 @@ ngx_process_options(ngx_cycle_t *cycle)
     {
         if (ngx_path_separator(*p)) {
             cycle->conf_prefix.len = p - cycle->conf_file.data + 1;
-            cycle->conf_prefix.data = cycle->conf_file.data;
+            cycle->conf_prefix.data = cycle->conf_file.data; // 重置conf前缀
             break;
         }
     }
