@@ -94,7 +94,7 @@ typedef struct {
     ngx_str_t         key;
     ngx_str_t         value;
     u_char           *lowcase_key;
-} ngx_table_elt_t;
+} ngx_table_elt_t;  // key-value元素，用于保存http中的k-v值
 
 
 void *ngx_hash_find(ngx_hash_t *hash, ngx_uint_t key, u_char *name, size_t len);

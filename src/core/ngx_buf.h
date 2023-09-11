@@ -17,15 +17,15 @@ typedef void *            ngx_buf_tag_t;
 
 typedef struct ngx_buf_s  ngx_buf_t;
 
-struct ngx_buf_s {
-    u_char          *pos;
+struct ngx_buf_s {  // 同时用于处理文件和内存
+    u_char          *pos;       // 当前位置
     u_char          *last;
     off_t            file_pos;
     off_t            file_last;
 
     u_char          *start;         /* start of buffer */
     u_char          *end;           /* end of buffer */
-    ngx_buf_tag_t    tag;
+    ngx_buf_tag_t    tag;   // 内存属于那个module
     ngx_file_t      *file;
     ngx_buf_t       *shadow;
 
@@ -42,11 +42,11 @@ struct ngx_buf_s {
     /* the buf's content is mmap()ed and must not be changed */
     unsigned         mmap:1;
 
-    unsigned         recycled:1;
-    unsigned         in_file:1;
-    unsigned         flush:1;
-    unsigned         sync:1;
-    unsigned         last_buf:1;
+    unsigned         recycled:1;        // 可回收
+    unsigned         in_file:1;         // 表明处理的是内存还是文件
+    unsigned         flush:1;           // 需要执行flush回刷
+    unsigned         sync:1;            // 同步，可能阻塞
+    unsigned         last_buf:1;        // 挂链时标识最后一个
     unsigned         last_in_chain:1;
 
     unsigned         last_shadow:1;
