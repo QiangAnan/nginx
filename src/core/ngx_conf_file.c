@@ -240,7 +240,7 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
 
     for ( ;; ) {
-        rc = ngx_conf_read_token(cf);
+        rc = ngx_conf_read_token(cf);  // 负责读取，每次读一个配置项后，返回调用set回调； 每个配置项和参数通过array保存
 
         /*
          * ngx_conf_read_token() may return
@@ -316,7 +316,7 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
         }
 
 
-        rc = ngx_conf_handler(cf, rc);
+        rc = ngx_conf_handler(cf, rc); // 匹配module，调用set回调
 
         if (rc == NGX_ERROR) {
             goto failed;
@@ -460,7 +460,7 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
                 }
             }
 
-            rv = cmd->set(cf, cmd, conf);
+            rv = cmd->set(cf, cmd, conf);  // 调用ngx_command_t中的set回调函数
 
             if (rv == NGX_CONF_OK) {
                 return NGX_OK;
@@ -620,7 +620,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
             }
         }
 
-        if (sharp_comment) {
+        if (sharp_comment) {  // 注释
             continue;
         }
 
@@ -655,7 +655,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
             }
         }
 
-        if (last_space) {
+        if (last_space) {  
 
             start = b->pos - 1;
             start_line = cf->conf_file->line;
@@ -802,11 +802,11 @@ ngx_conf_read_token(ngx_conf_t *cf)
                 *dst = '\0';
                 word->len = len;
 
-                if (ch == ';') {
+                if (ch == ';') {   // 当前配置项读完，外面调用set回调设置变量
                     return NGX_OK;
                 }
 
-                if (ch == '{') {
+                if (ch == '{') {   // 当前配置项读完，外面调用set回调申请内存
                     return NGX_CONF_BLOCK_START;
                 }
 

@@ -2,14 +2,16 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "nginx_make",
+			"label": "1.nginx_make",
 			"type": "shell",
 			"command": "make",
 			"args": [
-				"-j32"
+                // "-j32 && make install"  error
+				"-j32", "&&", "make", "install"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+                "cmd":"/home/nick/code/nginx/"
+				//"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -17,26 +19,23 @@
 			"group": "build",
 			"detail": "nginx_make_detail"
 		},
+
 		{
-			"label": "nginx_make_install",
-			"type": "shell",
-			"command": "make",
-			"args": [
-				"install"
-			],
-		},
-		{
-			"label": "nginx_make_clean",
+			"label": "2.nginx_make_clean",
 			"type": "shell",
 			"command": "make",
 			"args": [
 				"clean"
 			],
+            "group": "build",
 		},
+
         {
-			"label": "Clear Nginx Process",
+			"label": "3.Clear Nginx Process",
 			"type": "shell",
-			"command" : "killall nginx || true"
+			"command" : "killall nginx || true",
+            "dependsOn":"1.nginx_make",         // 依赖nginx_make任务执行
+            "group": "build",
         },
 	]
 }

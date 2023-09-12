@@ -49,7 +49,7 @@ struct ngx_cycle_s {
     ngx_connection_t         *free_connections;
     ngx_uint_t                free_connection_n;
 
-    ngx_module_t            **modules;
+    ngx_module_t            **modules;        // 保存module
     ngx_uint_t                modules_n;
     ngx_uint_t                modules_used;    /* unsigned  modules_used:1; */
 
@@ -93,7 +93,7 @@ typedef struct {
     ngx_msec_t                timer_resolution;
     ngx_msec_t                shutdown_timeout;
 
-    ngx_int_t                 worker_processes;
+    ngx_int_t                 worker_processes;      // 读取配置文件保存  
     ngx_int_t                 debug_points;
 
     ngx_int_t                 rlimit_nofile;
