@@ -53,7 +53,7 @@ ngx_cycle_modules(ngx_cycle_t *cycle)
         return NGX_ERROR;
     }
 
-    ngx_memcpy(cycle->modules, ngx_modules,
+    ngx_memcpy(cycle->modules, ngx_modules, // ngx_modules是个数组， ngx_modules_n = 54
                ngx_modules_n * sizeof(ngx_module_t *));
 
     cycle->modules_n = ngx_modules_n;

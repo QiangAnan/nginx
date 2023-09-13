@@ -240,6 +240,7 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
 
     for ( ;; ) {
+        // 正常情况下，读到空格，保存至args， 读到;和{则认为读到一个配置项，函数返回； 读到}，认为一个块处理完成
         rc = ngx_conf_read_token(cf);  // 负责读取，每次读一个配置项后，返回调用set回调； 每个配置项和参数通过array保存
 
         /*
@@ -460,7 +461,7 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
                 }
             }
 
-            rv = cmd->set(cf, cmd, conf);  // 调用ngx_command_t中的set回调函数
+            rv = cmd->set(cf, cmd, conf);  // 调用ngx_command_t中的set回调函数;  遇到块则递归处理块内数据
 
             if (rv == NGX_CONF_OK) {
                 return NGX_OK;
@@ -615,7 +616,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
         if (ch == LF) {
             cf->conf_file->line++;
 
-            if (sharp_comment) {  
+            if (sharp_comment) {    // 换行后，注释标记失效
                 sharp_comment = 0;
             }
         }
@@ -624,7 +625,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
             continue;
         }
 
-        if (quoted) {
+        if (quoted) {   // 处理转义字符？
             quoted = 0;
             continue;
         }
@@ -655,12 +656,12 @@ ngx_conf_read_token(ngx_conf_t *cf)
             }
         }
 
-        if (last_space) {  
+        if (last_space) {   // last_space初始值为1，起始流程； 另外完成一个匹配项目后也会置1表示重新开始
 
             start = b->pos - 1;
             start_line = cf->conf_file->line;
 
-            if (ch == ' ' || ch == '\t' || ch == CR || ch == LF) {
+            if (ch == ' ' || ch == '\t' || ch == CR || ch == LF) {  // 一上来就遇到特殊字符，continue
                 continue;
             }
 
@@ -668,14 +669,14 @@ ngx_conf_read_token(ngx_conf_t *cf)
 
             case ';':
             case '{':
-                if (cf->args->nelts == 0) {
+                if (cf->args->nelts == 0) {  // 如果前面没有匹配项，则报错
                     ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                        "unexpected \"%c\"", ch);
                     return NGX_ERROR;
                 }
 
                 if (ch == '{') {
-                    return NGX_CONF_BLOCK_START;
+                    return NGX_CONF_BLOCK_START;  // 表示完成一个块级别的匹配任务
                 }
 
                 return NGX_OK;
@@ -690,11 +691,11 @@ ngx_conf_read_token(ngx_conf_t *cf)
                 return NGX_CONF_BLOCK_DONE;
 
             case '#':
-                sharp_comment = 1;
+                sharp_comment = 1; // 注释符，后面会continue
                 continue;
 
             case '\\':
-                quoted = 1;
+                quoted = 1;     // 处理转义字符?
                 last_space = 0;
                 continue;
 
@@ -711,16 +712,16 @@ ngx_conf_read_token(ngx_conf_t *cf)
                 continue;
 
             case '$':
-                variable = 1;
+                variable = 1;  // variable用于区分{的含义
                 last_space = 0;
                 continue;
 
             default:
-                last_space = 0;
+                last_space = 0;  // 默认非特殊字符，置0走另外分支，获取配置项
             }
 
         } else {
-            if (ch == '{' && variable) {
+            if (ch == '{' && variable) {  // 处理 &{var}的形式参数， 这里{有变量和配置项目两个含义，如果之前有$则表示变量
                 continue;
             }
 
@@ -751,19 +752,20 @@ ngx_conf_read_token(ngx_conf_t *cf)
                 }
 
             } else if (ch == ' ' || ch == '\t' || ch == CR || ch == LF
-                       || ch == ';' || ch == '{')
+                       || ch == ';' || ch == '{')   // 这里不处理'}'是因为'}'前必然有';'
             {
                 last_space = 1;
                 found = 1;
             }
+           
 
             if (found) {
-                word = ngx_array_push(cf->args);
+                word = ngx_array_push(cf->args); // 从数组中一次选出元素
                 if (word == NULL) {
                     return NGX_ERROR;
                 }
 
-                word->data = ngx_pnalloc(cf->pool, b->pos - 1 - start + 1);
+                word->data = ngx_pnalloc(cf->pool, b->pos - 1 - start + 1);  // pos和start之间的元素为本次获取的元素
                 if (word->data == NULL) {
                     return NGX_ERROR;
                 }
