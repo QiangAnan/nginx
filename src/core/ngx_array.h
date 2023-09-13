@@ -15,9 +15,9 @@
 
 typedef struct {
     void        *elts;
-    ngx_uint_t   nelts;
+    ngx_uint_t   nelts;     // 当前使用数量
     size_t       size;
-    ngx_uint_t   nalloc;
+    ngx_uint_t   nalloc;    // 总容量
     ngx_pool_t  *pool;
 } ngx_array_t;
 

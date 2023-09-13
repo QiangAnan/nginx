@@ -10,7 +10,8 @@
             "request": "launch",
             //"program": "${fileDirname}/${fileBasenameNoExtension}",
             "program": "/usr/local/nginx/sbin/nginx",
-            "args": ["-c", "/home/nick/code/nginx/debug_dir/nginx.conf", "-e", "/home/nick/code/nginx/debug_dir/error.log"],
+            //"args": ["-c", "/home/nick/code/nginx/debug_dir/nginx.conf", "-e", "/home/nick/code/nginx/debug_dir/error.log"],
+            "args": ["-c", "/usr/local/nginx/conf/nginx.conf"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -40,7 +41,7 @@
                 },
             ],
             //"preLaunchTask": "nginx_compile"
-            "preLaunchTask":  "Clear Nginx Process"
+            "preLaunchTask":  "3.Clear Nginx Process"     // debug前执行tasks中的clear任务
         },
         {
             "name": "nginx attach pid debug",
