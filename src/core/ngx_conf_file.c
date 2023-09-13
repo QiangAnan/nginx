@@ -615,7 +615,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
         if (ch == LF) {
             cf->conf_file->line++;
 
-            if (sharp_comment) {
+            if (sharp_comment) {  
                 sharp_comment = 0;
             }
         }

@@ -179,7 +179,7 @@ typedef struct {
 
 
 typedef struct {
-    ngx_list_t                        headers;
+    ngx_list_t                        headers;  // 链表头部
 
     ngx_table_elt_t                  *host;
     ngx_table_elt_t                  *connection;
@@ -390,10 +390,10 @@ struct ngx_http_request_s {
                                          /* of ngx_http_upstream_state_t */
 
     ngx_pool_t                       *pool;
-    ngx_buf_t                        *header_in;
+    ngx_buf_t                        *header_in;        // NGINX收到的未解析的http头部
 
-    ngx_http_headers_in_t             headers_in;
-    ngx_http_headers_out_t            headers_out;
+    ngx_http_headers_in_t             headers_in;       // 已经解析的http头部
+    ngx_http_headers_out_t            headers_out;      // 相应消息
 
     ngx_http_request_body_t          *request_body;
 

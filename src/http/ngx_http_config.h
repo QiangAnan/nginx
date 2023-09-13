@@ -22,11 +22,11 @@ typedef struct {
 
 
 typedef struct {
-    ngx_int_t   (*preconfiguration)(ngx_conf_t *cf);
-    ngx_int_t   (*postconfiguration)(ngx_conf_t *cf);
+    ngx_int_t   (*preconfiguration)(ngx_conf_t *cf);            // 解析配置文件前调用
+    ngx_int_t   (*postconfiguration)(ngx_conf_t *cf);           // 完成配置文件的解析后调用
 
     void       *(*create_main_conf)(ngx_conf_t *cf);
-    char       *(*init_main_conf)(ngx_conf_t *cf, void *conf);
+    char       *(*init_main_conf)(ngx_conf_t *cf, void *conf);  // 常用于初始化main级别配置项
 
     void       *(*create_srv_conf)(ngx_conf_t *cf);
     char       *(*merge_srv_conf)(ngx_conf_t *cf, void *prev, void *conf);

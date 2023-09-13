@@ -115,12 +115,12 @@ typedef char *(*ngx_conf_handler_pt)(ngx_conf_t *cf,
 
 struct ngx_conf_s {
     char                 *name;
-    ngx_array_t          *args;
+    ngx_array_t          *args; // 保存解析到的配置项, 初始化10个元素
 
     ngx_cycle_t          *cycle;
     ngx_pool_t           *pool;
     ngx_pool_t           *temp_pool;
-    ngx_conf_file_t      *conf_file;
+    ngx_conf_file_t      *conf_file;    // 配置文件fd和对象的buffer
     ngx_log_t            *log;
 
     void                 *ctx;

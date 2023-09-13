@@ -57,15 +57,15 @@ struct ngx_cycle_s {
     ngx_uint_t                reusable_connections_n;
     time_t                    connections_reuse_time;
 
-    ngx_array_t               listening;
-    ngx_array_t               paths;
+    ngx_array_t               listening;    // ngx_listening_t, 默认十个
+    ngx_array_t               paths;        // elts中保存 ngx_path_t* 数组， 初始化10个元素
 
-    ngx_array_t               config_dump;
+    ngx_array_t               config_dump;  // ngx_conf_dump_t*
     ngx_rbtree_t              config_dump_rbtree;
     ngx_rbtree_node_t         config_dump_sentinel;
 
-    ngx_list_t                open_files;
-    ngx_list_t                shared_memory;
+    ngx_list_t                open_files;       // 链表， 初始化20个元素， ngx_open_file_t
+    ngx_list_t                shared_memory;    // 链表， 初始化1个元素， ngx_shm_zone_t
 
     ngx_uint_t                connection_n;
     ngx_uint_t                files_n;
@@ -82,7 +82,7 @@ struct ngx_cycle_s {
     ngx_str_t                 prefix;       // /usr/local/nginx/
     ngx_str_t                 error_log;    // logs/error.log
     ngx_str_t                 lock_file;
-    ngx_str_t                 hostname;
+    ngx_str_t                 hostname;     // 主机名
 };
 
 
