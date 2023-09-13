@@ -290,6 +290,7 @@ main(int argc, char *const *argv)
         return 1;
     }
 
+    /* 初始化cycle（重要）*/
     cycle = ngx_init_cycle(&init_cycle);
     if (cycle == NULL) {
         if (ngx_test_config) {

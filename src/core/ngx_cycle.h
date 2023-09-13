@@ -37,7 +37,9 @@ struct ngx_shm_zone_s {
 
 
 struct ngx_cycle_s {
-    void                  ****conf_ctx;
+    // 54 + 128个void *数组， 每个void*保存的是配置文件指针，如core就是ngx_core_conf_t  *
+    void                  ****conf_ctx; // 最外层是module数组，每个数组元素是个三维指针，保存的是每个moduled的配置文件，通过create_conf创建
+    
     ngx_pool_t               *pool;
 
     ngx_log_t                *log;
@@ -49,15 +51,15 @@ struct ngx_cycle_s {
     ngx_connection_t         *free_connections;
     ngx_uint_t                free_connection_n;
 
-    ngx_module_t            **modules;        // 保存module
-    ngx_uint_t                modules_n;
+    ngx_module_t            **modules;          // 保存module, 初始化183 + 1 个 ngx_module_t *数组
+    ngx_uint_t                modules_n;        // 指明modules中有多少个元素
     ngx_uint_t                modules_used;    /* unsigned  modules_used:1; */
 
     ngx_queue_t               reusable_connections_queue;
     ngx_uint_t                reusable_connections_n;
     time_t                    connections_reuse_time;
 
-    ngx_array_t               listening;
+    ngx_array_t               listening;  // ngx_listening_t
     ngx_array_t               paths;
 
     ngx_array_t               config_dump;

@@ -122,7 +122,7 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
     }
 
 
-    n = old_cycle->paths.nelts ? old_cycle->paths.nelts : 10;
+    n = old_cycle->paths.nelts ? old_cycle->paths.nelts : 10;  // nelts=0
 
     if (ngx_array_init(&cycle->paths, pool, n, sizeof(ngx_path_t *))
         != NGX_OK)
@@ -229,14 +229,14 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
 
 
     for (i = 0; cycle->modules[i]; i++) {
-        if (cycle->modules[i]->type != NGX_CORE_MODULE) {
+        if (cycle->modules[i]->type != NGX_CORE_MODULE) {  // type和每个module中的type比较
             continue;
         }
 
         module = cycle->modules[i]->ctx;
 
         if (module->create_conf) {
-            rv = module->create_conf(cycle);
+            rv = module->create_conf(cycle);  // 执行core module的create_conf回调函数 ngx_core_module_create_conf
             if (rv == NULL) {
                 ngx_destroy_pool(pool);
                 return NULL;
@@ -275,6 +275,7 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
     log->log_level = NGX_LOG_DEBUG_ALL;
 #endif
 
+    // 解析参数，默认将cf->cycle->conf_param中的值按照配置文件的规则进行解析
     if (ngx_conf_param(&conf) != NGX_CONF_OK) {
         environ = senv;
         ngx_destroy_cycle_pools(&conf);
