@@ -121,7 +121,6 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
         return NULL;
     }
 
-
     n = old_cycle->paths.nelts ? old_cycle->paths.nelts : 10;  // nelts=0
 
     if (ngx_array_init(&cycle->paths, pool, n, sizeof(ngx_path_t *))
@@ -132,7 +131,6 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
     }
 
     ngx_memzero(cycle->paths.elts, n * sizeof(ngx_path_t *));
-
 
     if (ngx_array_init(&cycle->config_dump, pool, 1, sizeof(ngx_conf_dump_t))
         != NGX_OK)
@@ -221,12 +219,10 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
 
     ngx_strlow(cycle->hostname.data, (u_char *) hostname, cycle->hostname.len);
 
-
     if (ngx_cycle_modules(cycle) != NGX_OK) {
         ngx_destroy_pool(pool);
         return NULL;
     }
-
 
     for (i = 0; cycle->modules[i]; i++) {
         if (cycle->modules[i]->type != NGX_CORE_MODULE) {  // type和每个module中的type比较
@@ -245,9 +241,7 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
         }
     }
 
-
     senv = environ;
-
 
     ngx_memzero(&conf, sizeof(ngx_conf_t));
     /* STUB: init array ? */
@@ -262,7 +256,6 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
         ngx_destroy_pool(pool);
         return NULL;
     }
-
 
     conf.ctx = cycle->conf_ctx;
     conf.cycle = cycle;
@@ -282,7 +275,7 @@ ngx_init_cycle(ngx_cycle_t *old_cycle)
         return NULL;
     }
 
-    // 解析配置文件
+    // 解析配置文件（重要， 逐字解析后调用对应command的set回调函数）
     if (ngx_conf_parse(&conf, &cycle->conf_file) != NGX_CONF_OK) {
         environ = senv;
         ngx_destroy_cycle_pools(&conf);

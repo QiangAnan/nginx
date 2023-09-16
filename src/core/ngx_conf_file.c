@@ -173,12 +173,11 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
     prev = NULL;
 #endif
 
+    /* 1. 判断解析类型：可以解析文件、block块、param参数 */
     if (filename) {
 
         /* open configuration file */
-
         fd = ngx_open_file(filename->data, NGX_FILE_RDONLY, NGX_FILE_OPEN, 0);
-
         if (fd == NGX_INVALID_FILE) {
             ngx_conf_log_error(NGX_LOG_EMERG, cf, ngx_errno,
                                ngx_open_file_n " \"%s\" failed",
@@ -187,7 +186,6 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
         }
 
         prev = cf->conf_file;
-
         cf->conf_file = &conf_file;
 
         if (ngx_fd_info(fd, &cf->conf_file->file.info) == NGX_FILE_ERROR) {
@@ -225,20 +223,16 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
             if (ngx_conf_add_dump(cf, filename) != NGX_OK) {
                 goto failed;
             }
-
         } else {
             cf->conf_file->dump = NULL;
         }
-
     } else if (cf->conf_file->file.fd != NGX_INVALID_FILE) {
-
         type = parse_block;
-
     } else {
         type = parse_param;
     }
 
-
+    /* 2. 读取buffer中的内容，逐字解析，遇到连续字母保存在args中，遇到;和{特殊助理  */
     for ( ;; ) {
         // 正常情况下，读到空格，保存至args， 读到;和{则认为读到一个配置项，函数返回； 读到}，认为一个块处理完成
         rc = ngx_conf_read_token(cf);  // 负责读取，每次读一个配置项后，返回调用set回调； 每个配置项和参数通过array保存
@@ -269,7 +263,7 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
         if (rc == NGX_CONF_FILE_DONE) {
 
-            if (type == parse_block) {
+            if (type == parse_block) { // 解析块的话不会以文件结束结尾
                 ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                    "unexpected end of file, expecting \"}\"");
                 goto failed;
@@ -280,7 +274,7 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
         if (rc == NGX_CONF_BLOCK_START) {
 
-            if (type == parse_param) {
+            if (type == parse_param) {  // 参数中没有{块结构
                 ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                    "block directives are not supported "
                                    "in -g option");
@@ -290,7 +284,7 @@ ngx_conf_parse(ngx_conf_t *cf, ngx_str_t *filename)
 
         /* rc == NGX_OK || rc == NGX_CONF_BLOCK_START */
 
-        if (cf->handler) {
+        if (cf->handler) {  // 默认为NULL
 
             /*
              * the custom handler, i.e., that is used in the http's
@@ -368,12 +362,12 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
 
     for (i = 0; cf->cycle->modules[i]; i++) {
 
-        cmd = cf->cycle->modules[i]->commands;
+        cmd = cf->cycle->modules[i]->commands; // 每个module下多个cmd
         if (cmd == NULL) {
             continue;
         }
 
-        for ( /* void */ ; cmd->name.len; cmd++) {
+        for ( /* void */ ; cmd->name.len; cmd++) { // 匹配某个cmd
 
             if (name->len != cmd->name.len) {
                 continue;
@@ -392,7 +386,6 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
             }
 
             /* is the directive's location right ? */
-
             if (!(cmd->type & cf->cmd_type)) {
                 continue;
             }
@@ -412,7 +405,6 @@ ngx_conf_handler(ngx_conf_t *cf, ngx_int_t last)
             }
 
             /* is the directive's argument count right ? */
-
             if (!(cmd->type & NGX_CONF_ANY)) {
 
                 if (cmd->type & NGX_CONF_FLAG) {
@@ -521,7 +513,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
     s_quoted = 0;
     d_quoted = 0;
 
-    cf->args->nelts = 0;
+    cf->args->nelts = 0; // 每次清零
     b = cf->conf_file->buffer;
     dump = cf->conf_file->dump;
     start = b->pos;
@@ -530,13 +522,9 @@ ngx_conf_read_token(ngx_conf_t *cf)
     file_size = ngx_file_size(&cf->conf_file->file.info);
 
     for ( ;; ) {
-
         if (b->pos >= b->last) {
-
             if (cf->conf_file->file.offset >= file_size) {
-
-                if (cf->args->nelts > 0 || !last_space) {
-
+                if (cf->args->nelts > 0 || !last_space) {  // 读到文件末尾，但是还有没处理的配置项，说明配置未完成
                     if (cf->conf_file->file.fd == NGX_INVALID_FILE) {
                         ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                            "unexpected end of parameter, "
@@ -549,7 +537,6 @@ ngx_conf_read_token(ngx_conf_t *cf)
                                   "expecting \";\" or \"}\"");
                     return NGX_ERROR;
                 }
-
                 return NGX_CONF_FILE_DONE;
             }
 
@@ -557,13 +544,10 @@ ngx_conf_read_token(ngx_conf_t *cf)
 
             if (len == NGX_CONF_BUFFER) {
                 cf->conf_file->line = start_line;
-
                 if (d_quoted) {
                     ch = '"';
-
                 } else if (s_quoted) {
                     ch = '\'';
-
                 } else {
                     ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
                                        "too long parameter \"%*s...\" started",
@@ -611,6 +595,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
             }
         }
 
+        // 读取每个字符
         ch = *b->pos++;
 
         if (ch == LF) {
@@ -630,7 +615,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
             continue;
         }
 
-        if (need_space) {
+        if (need_space) { // 遇到“” '' 的末尾符号时，需要空格、tab、结束符来分割
             if (ch == ' ' || ch == '\t' || ch == CR || ch == LF) {
                 last_space = 1;
                 need_space = 0;
@@ -657,7 +642,6 @@ ngx_conf_read_token(ngx_conf_t *cf)
         }
 
         if (last_space) {   // last_space初始值为1，起始流程； 另外完成一个匹配项目后也会置1表示重新开始
-
             start = b->pos - 1;
             start_line = cf->conf_file->line;
 
@@ -666,7 +650,6 @@ ngx_conf_read_token(ngx_conf_t *cf)
             }
 
             switch (ch) {
-
             case ';':
             case '{':
                 if (cf->args->nelts == 0) {  // 如果前面没有匹配项，则报错
@@ -678,7 +661,6 @@ ngx_conf_read_token(ngx_conf_t *cf)
                 if (ch == '{') {
                     return NGX_CONF_BLOCK_START;  // 表示完成一个块级别的匹配任务
                 }
-
                 return NGX_OK;
 
             case '}':
@@ -687,7 +669,6 @@ ngx_conf_read_token(ngx_conf_t *cf)
                                        "unexpected \"}\"");
                     return NGX_ERROR;
                 }
-
                 return NGX_CONF_BLOCK_DONE;
 
             case '#':
@@ -740,7 +721,7 @@ ngx_conf_read_token(ngx_conf_t *cf)
             if (d_quoted) {
                 if (ch == '"') {
                     d_quoted = 0;
-                    need_space = 1;
+                    need_space = 1;  // 需要空格、tab、分号来区分''  ,""
                     found = 1;
                 }
 
