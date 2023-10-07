@@ -222,7 +222,7 @@ main(int argc, char *const *argv)
 
     /* TODO */ ngx_max_sockets = -1;
 
-    ngx_time_init();
+    ngx_time_init();  // 初始化缓存时间
 
 #if (NGX_PCRE)
     ngx_regex_init();  // 注册malloc和free回调函数
