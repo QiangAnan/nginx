@@ -220,8 +220,8 @@
 
 
 struct ngx_module_s {
-    ngx_uint_t            ctx_index;
-    ngx_uint_t            index;
+    ngx_uint_t            ctx_index;    // 在conf中的index
+    ngx_uint_t            index;        // 在module中的index
 
     char                 *name;
 

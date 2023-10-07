@@ -916,7 +916,7 @@ ngx_save_argv(ngx_cycle_t *cycle, int argc, char *const *argv)
         return NGX_ERROR;
     }
 
-    for (i = 0; i < argc; i++) {
+    for (i = 0; i < argc; i++) {  // /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
         len = ngx_strlen(argv[i]) + 1;
 
         ngx_argv[i] = ngx_alloc(len, cycle->log);
@@ -988,7 +988,7 @@ ngx_process_options(ngx_cycle_t *cycle)
 #else
 
 #ifdef NGX_CONF_PREFIX
-        ngx_str_set(&cycle->conf_prefix, NGX_CONF_PREFIX); 
+        ngx_str_set(&cycle->conf_prefix, NGX_CONF_PREFIX);  // conf/
 #else
         ngx_str_set(&cycle->conf_prefix, NGX_PREFIX);
 #endif
@@ -1015,7 +1015,7 @@ ngx_process_options(ngx_cycle_t *cycle)
     {
         if (ngx_path_separator(*p)) {
             cycle->conf_prefix.len = p - cycle->conf_file.data + 1;
-            cycle->conf_prefix.data = cycle->conf_file.data; // 重置conf前缀
+            cycle->conf_prefix.data = cycle->conf_file.data; // 重置conf前缀为usr/local/nginx/conf/
             break;
         }
     }
