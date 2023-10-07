@@ -205,13 +205,10 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
         flags = NGX_UPDATE_TIME;
 
 #if (NGX_WIN32)
-
         /* handle signals from master in case of network inactivity */
-
         if (timer == NGX_TIMER_INFINITE || timer > 500) {
             timer = 500;
         }
-
 #endif
     }
 
@@ -226,7 +223,6 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
 
             if (ngx_accept_mutex_held) {
                 flags |= NGX_POST_EVENTS;
-
             } else {
                 if (timer == NGX_TIMER_INFINITE
                     || timer > ngx_accept_mutex_delay)
@@ -244,6 +240,7 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
 
     delta = ngx_current_msec;
 
+    // select  epoll 等处理函数
     (void) ngx_process_events(cycle, timer, flags);   // ngx_epoll_process_events
 
     delta = ngx_current_msec - delta;

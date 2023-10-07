@@ -117,7 +117,7 @@ ngx_module_t  ngx_http_module = {
 
 
 static char *
-ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
+ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf) // 参数conf实则保存在cycle中的conf_ctx
 {
     char                        *rv;
     ngx_uint_t                   mi, m, s;
@@ -141,26 +141,19 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 
     *(ngx_http_conf_ctx_t **) conf = ctx;
 
-
     /* count the number of the http modules and set up their indices */
-
-    ngx_http_max_module = ngx_count_modules(cf->cycle, NGX_HTTP_MODULE);
-
+    ngx_http_max_module = ngx_count_modules(cf->cycle, NGX_HTTP_MODULE);  // 45个
 
     /* the http main_conf context, it is the same in the all http contexts */
-
-    ctx->main_conf = ngx_pcalloc(cf->pool,
-                                 sizeof(void *) * ngx_http_max_module);
+    ctx->main_conf = ngx_pcalloc(cf->pool, sizeof(void *) * ngx_http_max_module);
     if (ctx->main_conf == NULL) {
         return NGX_CONF_ERROR;
     }
-
 
     /*
      * the http null srv_conf context, it is used to merge
      * the server{}s' srv_conf's
      */
-
     ctx->srv_conf = ngx_pcalloc(cf->pool, sizeof(void *) * ngx_http_max_module);
     if (ctx->srv_conf == NULL) {
         return NGX_CONF_ERROR;
@@ -171,18 +164,15 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
      * the http null loc_conf context, it is used to merge
      * the server{}s' loc_conf's
      */
-
     ctx->loc_conf = ngx_pcalloc(cf->pool, sizeof(void *) * ngx_http_max_module);
     if (ctx->loc_conf == NULL) {
         return NGX_CONF_ERROR;
     }
 
-
     /*
      * create the main_conf's, the null srv_conf's, and the null loc_conf's
      * of the all http modules
      */
-
     for (m = 0; cf->cycle->modules[m]; m++) {
         if (cf->cycle->modules[m]->type != NGX_HTTP_MODULE) {
             continue;
@@ -191,6 +181,7 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
         module = cf->cycle->modules[m]->ctx;
         mi = cf->cycle->modules[m]->ctx_index;
 
+        /* 调用具体module内的回调，创建配置文件 */
         if (module->create_main_conf) {
             ctx->main_conf[mi] = module->create_main_conf(cf);
             if (ctx->main_conf[mi] == NULL) {
@@ -223,6 +214,7 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 
         module = cf->cycle->modules[m]->ctx;
 
+        /* 初始化配置文件 */
         if (module->preconfiguration) {
             if (module->preconfiguration(cf) != NGX_OK) {
                 return NGX_CONF_ERROR;
@@ -234,7 +226,7 @@ ngx_http_block(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
 
     cf->module_type = NGX_HTTP_MODULE;
     cf->cmd_type = NGX_HTTP_MAIN_CONF;
-    rv = ngx_conf_parse(cf, NULL);
+    rv = ngx_conf_parse(cf, NULL);  // 这里使用老的cf，继续从老的cf pos位置开始解析
 
     if (rv != NGX_CONF_OK) {
         goto failed;

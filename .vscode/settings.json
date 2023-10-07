@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "ngx_core.h": "c"
-    }
+    },
+    "highlightwords.defaultMode": 1
 }

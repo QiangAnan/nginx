@@ -2824,7 +2824,7 @@ ngx_http_core_server(ngx_conf_t *cf, ngx_command_t *cmd, void *dummy)
     }
 
     http_ctx = cf->ctx;
-    ctx->main_conf = http_ctx->main_conf;
+    ctx->main_conf = http_ctx->main_conf;  // 继承main_conf
 
     /* the server{}'s srv_conf */
 
@@ -2965,7 +2965,8 @@ ngx_http_core_location(ngx_conf_t *cf, ngx_command_t *cmd, void *dummy)
     }
 
     pctx = cf->ctx;
-    ctx->main_conf = pctx->main_conf;
+    // location区域，继承main和server
+    ctx->main_conf = pctx->main_conf;  
     ctx->srv_conf = pctx->srv_conf;
 
     ctx->loc_conf = ngx_pcalloc(cf->pool, sizeof(void *) * ngx_http_max_module);

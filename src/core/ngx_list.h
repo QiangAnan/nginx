@@ -26,7 +26,7 @@ typedef struct {
     ngx_list_part_t  *last;     // 链表最后一个元素
     ngx_list_part_t   part;     // 链表第一个元素
     size_t            size;     // 每个链表元素中数组元素大小
-    ngx_uint_t        nalloc;   // 每个链表元素中数组有多少个
+    ngx_uint_t        nalloc;   // 链表总的分配个数
     ngx_pool_t       *pool;     // 内存池
 } ngx_list_t;
 
@@ -36,7 +36,7 @@ ngx_list_t *ngx_list_create(ngx_pool_t *pool, ngx_uint_t n, size_t size);
 static ngx_inline ngx_int_t
 ngx_list_init(ngx_list_t *list, ngx_pool_t *pool, ngx_uint_t n, size_t size)
 {
-    list->part.elts = ngx_palloc(pool, n * size);
+    list->part.elts = ngx_palloc(pool, n * size); // 初始化分配给第一个链表节点
     if (list->part.elts == NULL) {
         return NGX_ERROR;
     }

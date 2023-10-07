@@ -60,13 +60,14 @@ struct ngx_cycle_s {
     time_t                    connections_reuse_time;
 
     ngx_array_t               listening;    // ngx_listening_t, 默认十个
+
     ngx_array_t               paths;        // elts中保存 ngx_path_t* 数组， 初始化10个元素
 
     ngx_array_t               config_dump;  // ngx_conf_dump_t*
     ngx_rbtree_t              config_dump_rbtree;
     ngx_rbtree_node_t         config_dump_sentinel;
 
-    ngx_list_t                open_files;       // 链表， 初始化20个元素， ngx_open_file_t
+    ngx_list_t                open_files;       // 链表，每个链表节点为数组，初始化数组的总个数为20个元素， ngx_open_file_t
     ngx_list_t                shared_memory;    // 链表， 初始化1个元素， ngx_shm_zone_t
 
     ngx_uint_t                connection_n;
@@ -79,8 +80,8 @@ struct ngx_cycle_s {
     ngx_cycle_t              *old_cycle;
 
     ngx_str_t                 conf_file;    // /usr/local/nginx/conf/nginx.conf
-    ngx_str_t                 conf_param;
-    ngx_str_t                 conf_prefix;  // conf/
+    ngx_str_t                 conf_param;   // 默认为空
+    ngx_str_t                 conf_prefix;  // conf/, 会根据conf_file重置为 usr/local/nginx/conf/
     ngx_str_t                 prefix;       // /usr/local/nginx/
     ngx_str_t                 error_log;    // logs/error.log
     ngx_str_t                 lock_file;

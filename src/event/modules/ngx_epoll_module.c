@@ -797,6 +797,11 @@ ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer, ngx_uint_t flags)
     ngx_log_debug1(NGX_LOG_DEBUG_EVENT, cycle->log, 0,
                    "epoll timer: %M", timer);
 
+    /*
+        ep: epoll实例
+        event_list事件数组， nevnets表示数组大小
+        返回值events表示那些事件发生了变化，即需要处理
+    */
     events = epoll_wait(ep, event_list, (int) nevents, timer);
 
     err = (events == -1) ? ngx_errno : 0;
@@ -898,7 +903,7 @@ ngx_epoll_process_events(ngx_cycle_t *cycle, ngx_msec_t timer, ngx_uint_t flags)
                 ngx_post_event(rev, queue);
 
             } else {
-                rev->handler(rev);  // ngx_event_accept
+                rev->handler(rev);  // ngx_event_accept 、ngx_http_keepalive_handler
             }
         }
 
